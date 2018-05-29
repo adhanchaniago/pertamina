@@ -23,10 +23,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
      <footer class="main-footer ">
     <div class="pull-right hidden-xs">
      <!--  <small> Page rendered in <strong>{elapsed_time}</strong> seconds. <b>Version</b> 1.0.0 (BETA)</small> -->
-     <small><strong>SKRIPSI YURANDA 1422500233</strong></small>
+     <small><strong></strong></small>
     </div>
    <div class="container">
-      <small>&copy; 2017 <?php if(date('Y')!=2017) echo "- ".date('Y'); ?> Kementerian Komunikasi dan Informatikan Provinsi Kepuluan Bangka Belitung Develop By 1422500233 - Yuranda<small>
+      <small>&copy; 2017 <?php if(date('Y')!=2017) echo "- ".date('Y'); ?> Pertamina Provinsi Kepuluan Bangka Belitung Develop By TeitraMega<small>
    </div>
 </footer>
 
