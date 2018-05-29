@@ -1,4 +1,4 @@
-<div class="row">
+<!-- <div class="row">
     <div class="col-md-3">
         <div class="info-box bg-yellow">
             <span class="info-box-icon"><i class="fa fa-users"></i></span>
@@ -52,4 +52,4 @@
      
 </div>
 
-   
+    -->

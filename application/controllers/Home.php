@@ -14,10 +14,10 @@ class Home extends Pertamina {
 	public function index() 
 	{
 
-		$this->page_title->push('Home', 'Selamat datang di Sistem Penerimaan Karyawan Baru Pertamina');
+		$this->page_title->push('Home', 'Selamat datang di Sistem Monitoring Pertamina');
 
 		$this->data = array(
-			'title' => "Home - Sistem Penerimaan Pegawai", 
+			'title' => "Home - Sistem Monitoring", 
 			'breadcrumbs' => $this->breadcrumbs->show(),
 			'page_title' => $this->page_title->show(),
 			

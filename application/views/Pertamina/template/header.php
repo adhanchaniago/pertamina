@@ -31,7 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <link rel="stylesheet" href="<?php echo base_url("assets/public/summernote/summernote.css"); ?>">
   <link rel="stylesheet" href="<?php echo base_url("assets/pertamina/css/form-wizard.css"); ?>">
   <link rel="stylesheet" href="<?php echo base_url("assets/public/plugins/autocomplete/tautocomplete.css?v=".md5(date('YmdHis'))); ?>">
-  <link rel="shortcut icon" type="image/png" href="<?php echo base_url('assets/public/image/kominfo.png') ?>"/>
+  <link rel="shortcut icon" type="image/png" href="<?php echo base_url('assets/public/image/pertamina.png') ?>"/>
 
   <script src="<?php echo base_url("assets/public/plugins/jQuery/jquery-2.2.3.min.js"); ?>"></script> 
   <script src="<?php echo base_url("assets/public/bootstrap/js/bootstrap.min.js"); ?>"></script>
