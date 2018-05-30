@@ -6,7 +6,7 @@
 	<title><?php echo $title ?></title>
 	<meta name="description" content="Sistem Informasi Penerimaan Karyawan Kemkominfo Provinsi Bangka Belitung">
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-	<link rel="shortcut icon" type="image/png" href="<?php echo base_url('assets/public/image/kominfo.png') ?>"/>
+	 <link rel="shortcut icon" type="image/png" href="<?php echo base_url('assets/public/image/pertamina.png') ?>"/>
 	<link rel="stylesheet" href="<?php echo base_url("assets/public/bootstrap/css/bootstrap.min.css"); ?>">
 	<link rel="stylesheet" href="<?php echo base_url("assets/pertamina/css/main.css"); ?>">
 	<link rel="stylesheet" href="<?php echo base_url("assets/public/font-awesome/css/font-awesome.min.css"); ?>">
@@ -87,13 +87,10 @@
 	<nav class="navbar navbar-default" role="navigation">
 		<div class="container">
 			<div class="navbar-header">
-                <img src="<?php echo base_url("assets/public/image/info.png"); ?>" class="logo-head" alt="Logo" width="440">
-			</div>
-			<div class="col-md-1 pull-right" style="margin-top: 15px;">
-				<a href="<?php echo base_url('login') ?>"><h3 class="profile-username text-center font-arial enjoy-css">Login</h3></a>
+                <img src="<?php echo base_url("assets/public/image/logo.png"); ?>" class="logo-head" alt="Logo" width="300">
 			</div>
 			<div class="col-md-2 pull-right" style="margin-top: 15px; margin-left: 50px;">
-				<a href="<?php echo base_url('daftar') ?>"><h3 class="profile-username text-center font-arial enjoy-css">Daftar</h3></a>
+				<a href="<?php echo base_url('login') ?>"><h3 class="profile-username text-center font-arial enjoy-css">Login</h3></a>
 			</div>
 			<div class="col-md-1 pull-right" style="margin-top: 15px; ">
 				<a href="<?php echo base_url('main') ?>"><h3 class="profile-username text-center font-arial enjoy-css">Beranda</h3></a>
@@ -109,68 +106,13 @@
 	  		</div>
 			
 
-<!-- 			<div class="col-md-3">
-
-		          <div class="box box-primary radius blue-bg shadow trigonal">
-		            <div class="box-body box-profile ">
-		            	 <h3 class="profile-username text-center font-opd enjoy-css">Informasi</h3>
-		              <img class="profile-user-img img-responsive bg-blue img-circle" src="<?php echo base_url("assets/images/info.jpg"); ?>" alt="Login logo" >
-		              	<br>		           
-		              	<p class=" text-center white">Informasi Lowongan Pekerjaan</p>
-
-		            </div>
-		          </div>
-
-			</div> -->
-
-			<!-- <div class="col-md-3">
-
-		          <div class="box box-primary radius blue-bg shadow trigonal">
-		            <div class="box-body box-profile ">
-		            	<a id="get-kontak"> <h3 class="profile-username text-center font-opd enjoy-css">Kontak</h3></a>
-		              <img class="profile-user-img img-responsive bg-blue img-circle" src="<?php echo base_url("assets/images/kontak.jpg"); ?>" alt="kontak logo">
-		              	<br>		           
-		              	<p class=" text-center white">Kontak Pelayanan</p>
-
-		            </div>
-		          </div>
-
-			</div> -->
-
-			<!-- <div class="col-md-3">
-
-		          <div class="box box-primary radius blue-bg shadow trigonal">
-		            <div class="box-body box-profile ">
-		            	 <h3 class="profile-username text-center font-opd enjoy-css">Publik</h3>
-		              <img class="profile-user-img img-responsive bg-blue img-circle" src="<?php echo base_url("assets/images/public.jpg"); ?>" alt="Login logo">
-		              	<br>		           
-		              	<p class=" text-center white">Publikasi Kemkoninfo</p>
-		            </div>
-		          </div>
-
-			</div>
- -->
-			<!-- <div class="col-md-3">
-
-		          <div class="box box-primary radius blue-bg shadow trigonal">
-		            <div class="box-body box-profile ">
-		            	<a href="<?php echo base_url('login') ?>"><h3 class="profile-username text-center font-opd enjoy-css">Login</h3></a>
-		              <img  class="profile-user-img img-responsive bg-blue img-circle" src="<?php echo base_url("assets/images/login.jpg"); ?>" alt="Login logo">
-		              	<br>		           
-		              	<p class=" text-center white">Login</p>
-		            </div>
-		          </div>
-
-			</div> -->
-
-		
 			
 		</div>
 	</div>
 <div class="navbar navbar-inverse navbar-fixed-bottom">
    <div class="container">
-      <small class="navbar-text pull-left">&copy; Kementerian Komunikasi dan Informatikan Provinsi Kepuluan Bangka Belitung</small>
-      <small class="navbar-text pull-right">Develop By 1422500233 - Yuranda</small>
+      <small class="navbar-text pull-left">&copy; Sistem Monitoring Pertamina Provinsi Kepuluan Bangka Belitung</small>
+      <small class="navbar-text pull-right">Develop By TeitraMega</small>
    </div>
 </div>	
 

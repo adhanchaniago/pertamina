@@ -6,7 +6,7 @@
 	<title><?php echo $title ?></title>
 	<meta name="description" content="Sistem Informasi Penerimaan Karyawan Kemkominfo Provinsi Bangka Belitung">
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-	<link rel="shortcut icon" type="image/png" href="<?php echo base_url('assets/public/image/kominfo.png') ?>"/>
+	<link rel="shortcut icon" type="image/png" href="<?php echo base_url('assets/public/image/pertamina.png') ?>"/>
 	<link rel="stylesheet" href="<?php echo base_url("assets/public/bootstrap/css/bootstrap.min.css"); ?>">
 	<link rel="stylesheet" href="<?php echo base_url("assets/pertamina/css/main.css"); ?>">
 	<link rel="stylesheet" href="<?php echo base_url("assets/public/font-awesome/css/font-awesome.min.css"); ?>">
@@ -78,8 +78,11 @@
 			font-size: 24px;
 		}
 		div.border{
-			border-left: 3pt solid #EEB715;
-			border-right: 3pt solid #EEB715;
+			border-left: 3pt solid #ACC42A;
+			border-right: 3pt solid #ACC42A;
+		}
+		.btn-masuk {
+			background-color: #ACC42A;
 		}
 
 	</style>
@@ -88,13 +91,10 @@
 	<nav class="navbar navbar-default" role="navigation">
 		<div class="container">
 			<div class="navbar-header">
-                <img src="<?php echo base_url("assets/public/image/info.png"); ?>" class="logo-head" alt="Logo" width="440">
-			</div>
-			<div class="col-md-1 pull-right" style="margin-top: 15px;">
-				<a href="<?php echo base_url('login') ?>"><h3 class="profile-username text-center font-arial enjoy-css">Login</h3></a>
+                <img src="<?php echo base_url("assets/public/image/logo.png"); ?>" class="logo-head" alt="Logo" width="300">
 			</div>
 			<div class="col-md-2 pull-right" style="margin-top: 15px; margin-left: 50px;">
-				<a href="<?php echo base_url('daftar') ?>"><h3 class="profile-username text-center font-arial enjoy-css">Daftar</h3></a>
+				<a href="<?php echo base_url('login') ?>"><h3 class="profile-username text-center font-arial enjoy-css">Login</h3></a>
 			</div>
 			<div class="col-md-1 pull-right" style="margin-top: 15px; ">
 				<a href="<?php echo base_url('main') ?>"><h3 class="profile-username text-center font-arial enjoy-css">Beranda</h3></a>
@@ -130,7 +130,7 @@
 	      				<input type="password" name="password" value="<?php echo set_value('password'); ?>" class="form-control input-md" placeholder="Password">
 	      				<p class="help-block"><?php echo form_error('password', '<small class="text-danger">', '</small>'); ?></p>
 	      			</div>
-	      			<button type="submit" class="btn btn-warning btn-block">Masuk</button>
+	      			<button type="submit" class="btn btn-masuk btn-block">Masuk</button>
 	      			<br>
 	      		</form>
 	      		<div class="social-auth-links text-center">
