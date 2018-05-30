@@ -35,11 +35,3 @@ $(document).ready(function() {
       "autoWidth": false
     });
   });
-
-//<![CDATA[
-$(document).ready(function(){
-$(".group3").colorbox({rel:'group3', transition:"none", width:"75%", height:"auto"});
-});
-//]]>
-
-});

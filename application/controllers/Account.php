@@ -1,7 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Account extends Pertamina {
+class Account extends Pertamina 
+{
 
 	public function __construct()
 	{

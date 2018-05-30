@@ -27,6 +27,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </a>
       </li>
 
+      <li class="<?php echo active_link_method('index','pegawai').active_link_method('create','pegawai').active_link_method('update','pegawai'); ?>">
+        <a href="<?php  echo site_url('pegawai') ?>">
+          <i class="fa fa-home"></i> <span>Pegawai</span>
+        </a>
+      </li>
+
       <li class="treeview <?php echo active_link_multiple(array('bobot','kriteria','sub_kriteria','analisa','konversi')); ?>">
         <a href="#">
           <i class="fa fa-wrench"></i> <span> Master Penilaian</span>
