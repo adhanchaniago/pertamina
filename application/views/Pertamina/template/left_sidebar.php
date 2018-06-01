@@ -32,6 +32,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <i class="fa fa-home"></i> <span>Pegawai</span>
         </a>
       </li>
+      <li class="<?php echo active_link_method('index','pekerjaan').active_link_method('create').active_link_method('update'); ?>">
+        <a href="<?php  echo site_url('pekerjaan') ?>">
+          <i class="fa fa-home"></i> <span>Pekerjaan</span>
+        </a>
+      </li>
 
       <li class="treeview <?php echo active_link_multiple(array('bobot','kriteria','sub_kriteria','analisa','konversi')); ?>">
         <a href="#">
