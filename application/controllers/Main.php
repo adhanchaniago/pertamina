@@ -12,7 +12,7 @@ class Main extends CI_Controller
 	public function index()
 	{
 		$this->data = array(
-			'title' => "KEMKOMINFO - Sistem Informasi Penerimaan Karyawan Kemkominfo Provinsi Bangka Belitung"
+			'title' => "PERTAMINA"
 		);
 
 		$this->load->view('Portal', $this->data);
