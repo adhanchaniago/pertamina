@@ -32,22 +32,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <i class="fa fa-home"></i> <span>Pegawai</span>
         </a>
       </li>
-      <li class="<?php echo active_link_method('index','pekerjaan').active_link_method('create').active_link_method('update'); ?>">
+      <li class="<?php echo active_link_method('index','pekerjaan').active_link_method('create','pekerjaan').active_link_method('update','pekerjaan'); ?>">
         <a href="<?php  echo site_url('pekerjaan') ?>">
           <i class="fa fa-home"></i> <span>Pekerjaan</span>
         </a>
       </li>
-
-      <li class="treeview <?php echo active_link_multiple(array('bobot','kriteria','sub_kriteria','analisa','konversi')); ?>">
+      <li class="<?php echo active_link_method('index','konteraktor').active_link_method('create','konteraktor').active_link_method('update','konteraktor'); ?>">
+        <a href="<?php  echo site_url('Konteraktor') ?>">
+          <i class="fa fa-home"></i> <span>Kontraktor</span>
+        </a>
+      </li>
+      <li class="treeview <?php echo active_link_multiple(array('pekerjaan_final')); ?>">
         <a href="#">
-          <i class="fa fa-wrench"></i> <span> Master Penilaian</span>
+          <i class="fa fa-wrench"></i> <span> Master</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
           </span>
         </a>
         <ul class="treeview-menu">
-          <li class="<?php echo active_link_controller('index','bobot').active_link_controller('bobot','create').active_link_controller('bobot','update') ?>">
-            <a href="<?php echo site_url('bobot') ?>"><i class="fa fa-angle-double-right"></i> #</a>
+          <li class="<?php echo active_link_controller('index','pekerjaan_final').active_link_controller('pekerjaan_final','create').active_link_controller('pekerjaan_final','update') ?>">
+            <a href="<?php echo site_url('pekerjaan_final') ?>"><i class="fa fa-angle-double-right"></i>Pekerjaan Final</a>
           </li>
          
         </ul>

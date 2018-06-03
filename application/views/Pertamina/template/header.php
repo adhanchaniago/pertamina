@@ -25,6 +25,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <link  rel="stylesheet" href="<?php echo base_url("assets/public/dist/css/hover-min.css"); ?>">
   <link rel="stylesheet" href="<?php echo base_url("assets/public/plugins/bootstrap-checkbox/awesome-bootstrap-checkbox.min.css"); ?>">
   <link rel="stylesheet" href="<?php echo base_url("assets/public/plugins/datepicker/datepicker3.min.css"); ?>">
+
+  <link rel="stylesheet" href="<?php echo base_url("assets/public/plugins/timepicker/bootstrap-timepicker.min.css"); ?>">
+
 <style type="text/css">.color{background-color: #A1A1A1;}</style>
 <link rel="stylesheet" href="<?php echo base_url("assets/public/plugins/datatables/dataTables.bootstrap.css"); ?>">
  
@@ -48,7 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   <script src="<?php echo base_url("assets/public/plugins/datatables/jquery.dataTables.min.js"); ?>"></script>
   <script src="<?php echo base_url("assets/public/plugins/datatables/dataTables.bootstrap.min.js"); ?>"></script>
-  
+  <script src="<?php echo base_url("assets/public/plugins/timepicker/bootstrap-timepicker.min.js"); ?>"></script>
 
   <script src="<?php echo base_url("assets/public/summernote/summernote.min.js"); ?>"></script>
   <script src="<?php echo base_url("assets/public/plugins/mask-money/jquery.maskMoney.min.js"); ?>"></script>
@@ -86,7 +89,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       "info": true,
       "autoWidth": false
     });
+        $('.timepicker').timepicker({
+      showInputs: false
+    });
   });
+
+  // $(function () {
+  //   $('.timepicker').timepicker({
+  //     showInputs: false
+  //   });
+  // });
 
 </script>  
 </head>
