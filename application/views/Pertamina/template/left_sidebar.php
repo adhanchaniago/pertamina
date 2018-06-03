@@ -37,7 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <i class="fa fa-home"></i> <span>Pekerjaan</span>
         </a>
       </li>
-      <li class="<?php echo active_link_method('index','konteraktor').active_link_method('create','konteraktor').active_link_method('update','konteraktor'); ?>">
+      <li class="<?php echo active_link_method('index','Konteraktor').active_link_method('create','konteraktor').active_link_method('update','Konteraktor'); ?>">
         <a href="<?php  echo site_url('Konteraktor') ?>">
           <i class="fa fa-home"></i> <span>Kontraktor</span>
         </a>
