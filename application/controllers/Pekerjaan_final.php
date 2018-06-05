@@ -23,7 +23,7 @@ class Pekerjaan_final extends Pertamina
 			'title' => "Pekerjaan Final - Sistem Monitoring", 
 			'breadcrumbs' => $this->breadcrumbs->show(),
 			'page_title' => $this->page_title->show(),
-			'get' => $this->mpekerjaan_final->get()
+			'get' => $this->mpekerjaan_final->data()
 		);
 
 		$this->template->view('Pertamina/pekerjaan_final/data-pekerjaan_final', $this->data);
@@ -39,7 +39,6 @@ class Pekerjaan_final extends Pertamina
 		$this->form_validation->set_rules('tanggal', 'Tanggal', 'trim|required');
 		$this->form_validation->set_rules('id_kontraktor', 'Nama Kontraktor', 'trim|required');
 		$this->form_validation->set_rules('plan_target', 'Plan Target', 'trim|required');
-		$this->form_validation->set_rules('actual_target', 'Actual Target', 'trim|required');
 		$this->form_validation->set_rules('jam_mulai', 'Jam Mulai', 'trim|required');
 		$this->form_validation->set_rules('jam_selesai', 'Jam Selesai', 'trim|required');
 		$this->form_validation->set_rules('status', 'Status', 'trim|required');
@@ -69,8 +68,8 @@ class Pekerjaan_final extends Pertamina
 	{
 		$this->page_title->push('Pekerjaan Final', 'Update Data Pekerjaan Final');
 
-		$this->form_validation->set_rules('id_pekerjaan', 'Nama Pekerjaan', 'trim|required');
-		$this->form_validation->set_rules('pegawai', 'Nama Pegawai', 'trim|required');
+		$this->form_validation->set_rules('nama_pekerjaan', 'Nama Pekerjaan', 'trim|required');
+		$this->form_validation->set_rules('id_pegawai', 'Nama Pegawai', 'trim|required');
 		$this->form_validation->set_rules('pengawas', 'Nama Pengawas', 'trim|required');
 		$this->form_validation->set_rules('tanggal', 'Tanggal', 'trim|required');
 		$this->form_validation->set_rules('id_kontraktor', 'Nama Kontraktor', 'trim|required');
@@ -98,7 +97,7 @@ class Pekerjaan_final extends Pertamina
 			
 		);
 
-		$this->template->view('Pertamina/pekerjaan_final/create-pekerjaan_final', $this->data);
+		$this->template->view('Pertamina/pekerjaan_final/update-pekerjaan_final', $this->data);
 	}
 
 	public function delete($param = 0)

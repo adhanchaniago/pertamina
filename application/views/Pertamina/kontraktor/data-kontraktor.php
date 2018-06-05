@@ -1,10 +1,11 @@
+
 <div class="row">
 	<div class="col-md-8 col-md-offset-2 col-xs-12"><?php echo $this->session->flashdata('alert'); ?></div>
 	<div class="col-md-12">
 		<div class="box box-primary">
 			<div class="box-header with-border">
 				<div class="col-md-7">
-					<h3 class="box-title">Data Konteraktor Sistem</h3>
+					<h3 class="box-title">Constitution Data</h3>
 				</div>
 			</div>
 <?php  
@@ -39,7 +40,7 @@ echo form_open(current_url(), array('method' => 'get'));
 				</div>
 				<div class="pull-right">
 				
-					<a href="<?php echo site_url('konteraktor/create') ?>" class="btn btn-warning hvr-shadow btn-flat btn-sm"><i class="fa fa-plus"></i> Tambah Baru</a>
+					<a href="<?php echo site_url('konteraktor/create') ?>" class="btn btn-warning hvr-shadow btn-flat btn-sm"><i class="fa fa-plus"></i> Add</a>
 				
 				</div>
 			</div>
@@ -78,10 +79,11 @@ echo form_close();
 					<thead class="bg-silver">
 						<tr>
 							<th class="text-center" style="width: 50px;">No</th>
-							<th class="text-center">Nama</th>
-							<th class="text-center">Jenis</th>
-							<th class="text-center">Direktur</th>
-							<th class="text-center">Sekretaris</th>
+							<th class="text-center">Constitution name</th>
+							<th class="text-center">Type of Constitution</th>
+							<th class="text-center">Employee Name</th>
+							<th class="text-center">Director</th>
+							<th class="text-center">Secretary</th>
 							<th class="text-center">HSSE</th>
 							<th></th>
 						</tr>
@@ -92,6 +94,7 @@ echo form_close();
 							<td class="text-center"><?php echo ++$key ?></td>
 							<td class="text-center"><?php echo $value->nama ?></td>
 							<td class="text-center"><?php echo $value->jenis ?></td>
+							<td class="text-center"><?php echo $value->nama_pegawai ?></td>
 							<td class="text-center"><?php echo $value->direktur ?></td>
 							<td class="text-center"><?php echo $value->sekretaris ?></td>
 							<td class="text-center"><?php echo $value->HSSE ?></td>

@@ -5,12 +5,40 @@ class Mkontraktor extends Pertamina_Model
 {
 	public function get_tampil()
 	{
-		return $this->db->get('kontraktor')->result();
+		$this->db->select('*');
+		$this->db->from('kontraktor');
+		$this->db->join('pegawai', '.pegawai.id_pegawai = kontraktor.id_pegawai','LEFT');
+
+		//$this->db->group_by('tbl_kriteria.nama_kriteria', $param);
+		//$this->db->order_by('tbl_kriteria.id_kriteria', 'ASC');
+
+		return $this->db->get()->result();
 	}
 	
 	public function get($param = 0)
+	{	
+		// $this->db->select('*');
+		// $this->db->from('kontraktor');
+		// $this->db->join('pegawai', 'pegawai.id_pegawai = kontraktor.id_pegawai','LEFT');
+		// //$this->db->where('kontraktor', $param);
+		// return $this->db->get()->row();
+		return $this->db->get_where('kontraktor' , array('id'=> $param))->row();
+	}
+
+	public function get_pegawai()
 	{
-		return $this->db->get_where('kontraktor' , array('id' => $param))->row();
+		return $this->db->get('pegawai')->result();
+	}
+
+	public function ambil($param = 0)
+	{
+		return $this->db->get_where('pegawai', array('id_pegawai' => $param))->row();
+	}
+
+
+	public function get_katagori($katagori = 0)
+	{
+		return $this->db->get('pegawai' , array('id' => $katagori ))->result();
 	}
 
 	public function create()
@@ -19,6 +47,7 @@ class Mkontraktor extends Pertamina_Model
 		$data = array(
 			'nama' => $this->input->post('nama'),
 			'jenis' => $this->input->post('jenis'),
+			'id_pegawai' => $this->input->post('id_pegawai'),
 			'direktur' => $this->input->post('direktur'),
 			'sekretaris' => $this->input->post('sekretaris'),
 			'HSSE' => $this->input->post('HSSE'),
@@ -47,6 +76,7 @@ class Mkontraktor extends Pertamina_Model
 		$data = array(
 			'nama' => $this->input->post('nama'),
 			'jenis' => $this->input->post('jenis'),
+			'id_pegawai' => $this->input->post('id_pegawai'),
 			'direktur' => $this->input->post('direktur'),
 			'sekretaris' => $this->input->post('sekretaris'),
 			'HSSE' => $this->input->post('HSSE'),

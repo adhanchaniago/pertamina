@@ -20,7 +20,7 @@ class Konteraktor extends Pertamina
 	public function index() 
 	{
 
-		$this->page_title->push('Konteraktor', 'Data Konteraktor');
+		$this->page_title->push('Constitution', 'Constitution Data');
 
 		$this->data = array(
 			'title' => "Konteraktor - Sistem Monitoring", 
@@ -35,12 +35,13 @@ class Konteraktor extends Pertamina
 
 	public function create()
 	{
-		$this->page_title->push('Konteraktor', 'Data Konteraktor');
+		$this->page_title->push('Constitution', 'Constitution Data');
 
-		$this->form_validation->set_rules('nama', 'Nama Konteraktor ', 'trim|required');
-		$this->form_validation->set_rules('jenis', 'Jenis Konteraktor', 'trim|required');
-		$this->form_validation->set_rules('direktur', 'Direktur ', 'trim|required');
-		$this->form_validation->set_rules('sekretaris', 'Sekretaris', 'trim|required');
+		$this->form_validation->set_rules('nama', 'Constitution name ', 'trim|required');
+		$this->form_validation->set_rules('jenis', 'Type of Constitution', 'trim|required');
+		$this->form_validation->set_rules('id_pegawai', 'Employee Name ', 'trim|required');
+		$this->form_validation->set_rules('direktur', 'Director ', 'trim|required');
+		$this->form_validation->set_rules('sekretaris', 'Secretary', 'trim|required');
 		$this->form_validation->set_rules('HSSE', 'HSSE', 'trim|required');
 
 		if ($this->form_validation->run() == TRUE)
@@ -51,9 +52,10 @@ class Konteraktor extends Pertamina
 		}
 
 		$this->data = array(
-			'title' => "Konteraktor - Sistem Monitoring", 
+			'title' => "Constitution - Monitoring System", 
 			'breadcrumbs' => $this->breadcrumbs->show(),
 			'page_title' => $this->page_title->show(),
+			'pegawai' => $this->mkontraktor->get_pegawai(),
 
 			
 		);
@@ -67,6 +69,7 @@ class Konteraktor extends Pertamina
 
 		$this->form_validation->set_rules('nama', 'Nama Konteraktor ', 'trim|required');
 		$this->form_validation->set_rules('jenis', 'Jenis Konteraktor', 'trim|required');
+		$this->form_validation->set_rules('id_pegawai', 'Employee Name ', 'trim|required');
 		$this->form_validation->set_rules('direktur', 'Direktur ', 'trim|required');
 		$this->form_validation->set_rules('sekretaris', 'Sekretaris', 'trim|required');
 		$this->form_validation->set_rules('HSSE', 'HSSE', 'trim|required');
@@ -82,7 +85,9 @@ class Konteraktor extends Pertamina
 			'title' => "Konteraktor - Sistem Monitoring", 
 			'breadcrumbs' => $this->breadcrumbs->show(),
 			'page_title' => $this->page_title->show(),
-			'get' => $this->mkontraktor->get($param)
+			'get' => $this->mkontraktor->get($param),
+			'ambil' => $this->mkontraktor->ambil($param),
+			'pegawai' => $this->mkontraktor->get_pegawai(),
 			
 		);
 

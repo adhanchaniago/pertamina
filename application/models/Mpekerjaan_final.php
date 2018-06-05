@@ -16,7 +16,7 @@ class Mpekerjaan_final extends Pertamina_Model
 
 	public function get_katagori($katagori = 0)
 	{
-		return $this->db->get('pegawai' , array('id' => $katagori ))->result();
+		return $this->db->get('pegawai' , array('id_pegawai' => $katagori ))->result();
 	}
 
 	public function get_kontraktor()
@@ -25,20 +25,35 @@ class Mpekerjaan_final extends Pertamina_Model
 	}
 
 	public function get()
+	{	
+		$this->db->select('kontraktor.*, pekerjaan_final.id AS id, kontraktor.id  AS nama_pekerjaan');
+			$this->db->from('pekerjaan_final');
+		$this->db->join('kontraktor', 'kontraktor.id = pekerjaan_final.id', 'left');
+		return $this->db->get()->result();
+	}
+
+	public function data()
 	{
-		return $this->db->get_where('pekerjaan_final')->result();
+		//$this->db->select('pekerjaan_final.*, pekerjaan_final.id AS id, kontraktor.id  AS nama_pekerjaan, pekerjaan_final.id  AS id');
+		$this->db->from('pekerjaan_final');
+		$this->db->join('pegawai', 'pegawai.id_pegawai = pekerjaan_final.id_pegawai', 'left');
+		$this->db->join('kontraktor', 'kontraktor.id_pegawai = pekerjaan_final.id_pegawai', 'left');
+		//$this->db->join('pekerjaan_final', 'pekerjaan.nama_pekerjaan = pekerjaan_fina.nama_pekerjaan', 'left');
+		
+		return $this->db->get()->result();
+
 	}
 
 	public function create()
 	{
 		$data = array(
-			'id_pekerjaan' => $this->input->post('id_pekerjaan'),
-			'pegawai' => $this->input->post('pegawai'),
+			'nama_pekerjaan' => $this->input->post('id_pekerjaan'),
+			'id_pegawai' => $this->input->post('pegawai'),
 			'pengawas' => $this->input->post('pengawas'),
 			'tanggal' => $this->input->post('tanggal'),
 			'id_kontraktor' => $this->input->post('id_kontraktor'),
 			'plan_target' => $this->input->post('plan_target'),
-			'actual_target' => $this->input->post('actual_target'),
+			'actual_target' => Null,
 			'jam_mulai' => $this->input->post('jam_mulai'),
 			'jam_selesai' => $this->input->post('jam_selesai'),
 			'status' => $this->input->post('status'),
@@ -64,8 +79,8 @@ class Mpekerjaan_final extends Pertamina_Model
 	public function update($param = 0)
 	{
 		$data = array(
-			'id_pekerjaan' => $this->input->post('id_pekerjaan'),
-			'pegawai' => $this->input->post('pegawai'),
+			'nama_pekerjaan' => $this->input->post('nama_pekerjaan'),
+			'id_pegawai' => $this->input->post('id_pegawai'),
 			'pengawas' => $this->input->post('pengawas'),
 			'tanggal' => $this->input->post('tanggal'),
 			'id_kontraktor' => $this->input->post('id_kontraktor'),

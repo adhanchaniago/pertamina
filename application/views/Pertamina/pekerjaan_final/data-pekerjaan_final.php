@@ -1,4 +1,6 @@
-
+<pre>
+	<?php print_r($get) ?>
+</pre>
 <div class="row">
 	<div class="col-md-8 col-md-offset-2 col-xs-12"><?php echo $this->session->flashdata('alert'); ?></div>
 	<div class="col-md-12">
@@ -95,17 +97,17 @@ echo form_close();
 					<tbody>
 						<?php foreach ($get as $key => $value): ?>
 						<tr>
-							<td><?php echo ++$key ?></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
+							<td class="text-center"><?php echo ++$key ?></td>
+							<td class="text-center"><?php echo $value->nama_pekerjaan ?></td>
+							<td class="text-center"><?php echo $value->id_pegawai ?></td>
+							<td class="text-center"><?php echo $value->pengawas ?></td>
+							<td class="text-center"><?php echo $value->tanggal ?></td>
+							<td class="text-center"><?php echo $value->nama ?></td>
+							<td class="text-center"><?php echo $value->plan_target ?></td>
+							<td class="text-center"><?php echo $value->actual_target ?></td>
+							<td class="text-center"><?php echo $value->jam_mulai ?></td>
+							<td class="text-center"><?php echo $value->jam_selesai ?></td>
+							<td class="text-center"><?php echo $value->status ?></td>
 							<td>
 							<a href="<?php echo site_url("pekerjaan_final/update/{$value->id}") ?>" class="icon-button text-blue" data-toggle="tooltip" data-placement="top" title="Sunting"><i class="fa fa-pencil"></i></a>
 						

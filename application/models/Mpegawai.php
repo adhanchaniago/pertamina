@@ -15,14 +15,14 @@ class Mpegawai extends Pertamina_model
 
 	public function get($param = 0)
 	{
-		return $this->db->get_where('pegawai' , array('id' => $param))->row();
+		return $this->db->get_where('pegawai' , array('id_pegawai' => $param))->row();
 	}
 
 	public function create()
 	{
 	
 		$data = array(
-			'nama' => $this->input->post('nama'),
+			'nama_pegawai' => $this->input->post('nama_pegawai'),
 			'katagori' => $this->input->post('katagori'),  
 			
 		);
@@ -48,7 +48,7 @@ class Mpegawai extends Pertamina_model
 	{
 	
 		$data = array(
-			'nama' => $this->input->post('nama'),
+			'nama_pegawai' => $this->input->post('nama_pegawai'),
 			'katagori' => $this->input->post('katagori'),  
 		);
 
@@ -71,7 +71,7 @@ class Mpegawai extends Pertamina_model
 
 	public function delete($param = 0)
 	{
-		$this->db->delete('pegawai', array('id' => $param));
+		$this->db->delete('pegawai', array('id_pegawai' => $param));
 
 		if($this->db->affected_rows())
 		{

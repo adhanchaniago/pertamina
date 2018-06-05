@@ -13,7 +13,7 @@ class Mpekerjaan extends Pertamina_model
 		return $this->db->get('pekerjaan')->result();
 	}
 
-		public function get($param = 0)
+	public function get($param = 0)
 	{
 		return $this->db->get_where('pekerjaan' , array('id' => $param))->row();
 	}

@@ -15,8 +15,8 @@ echo form_open(current_url(), array('class' => 'form-horizontal'));
 				<div class="form-group">
 					<label for="nama" class="control-label col-md-3 col-xs-12">Nama Pegawai: <strong class="text-red">*</strong></label>
 					<div class="col-md-8">
-						<input type="text" name="nama" class="form-control" value="<?php echo set_value('nama'); ?>">
-						<p class="help-block"><?php echo form_error('nama', '<small class="text-red">', '</small>'); ?></p>
+						<input type="text" name="nama_pegawai" class="form-control" value="<?php echo set_value('nama_pegawai'); ?>">
+						<p class="help-block"><?php echo form_error('nama_pegawai', '<small class="text-red">', '</small>'); ?></p>
 					</div>
 				</div>
 				<div class="form-group">

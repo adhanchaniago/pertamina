@@ -39,7 +39,7 @@ echo form_open(current_url(), array('method' => 'get'));
 				</div>
 				<div class="pull-right">
 				
-					<a href="<?php echo site_url('pegawai/create') ?>" class="btn btn-warning hvr-shadow btn-flat btn-sm"><i class="fa fa-plus"></i> Tambah Baru</a>
+					<a href="<?php echo site_url('pegawai/create') ?>" class="btn btn-warning hvr-shadow btn-flat btn-sm"><i class="fa fa-plus"></i> Add</a>
 				
 				</div>
 			</div>
@@ -86,13 +86,13 @@ echo form_close();
 				<?php foreach ($tampil as $row) :?>
 						<tr>
 							<td class="text-center"><?php echo ++$this->page ?>.</td>
-							<td class="text-center"><?php echo $row->nama; ?></td>
+							<td class="text-center"><?php echo $row->nama_pegawai; ?></td>
 							<td class="text-center"><?php echo $row->katagori; ?></td>
 							<td class="text-center" style="width: 90px;">
 							
-							<a href="<?php echo site_url("pegawai/update/{$row->id}") ?>" class="icon-button text-blue" data-toggle="tooltip" data-placement="top" title="Sunting"><i class="fa fa-pencil"></i></a>
+							<a href="<?php echo site_url("pegawai/update/{$row->id_pegawai}") ?>" class="icon-button text-blue" data-toggle="tooltip" data-placement="top" title="Sunting"><i class="fa fa-pencil"></i></a>
 						
-							<a href="javascript:void(0)" id="delete-pegawai" data-id="<?php echo $row->id ?>" class="btn btn-xs btn-danger" data-toggle="tooltip" data-placement="top" title="Hapus">
+							<a href="javascript:void(0)" id="delete-pegawai" data-id="<?php echo $row->id_pegawai ?>" class="btn btn-xs btn-danger" data-toggle="tooltip" data-placement="top" title="Hapus">
                       		<i class="fa fa-trash-o"></i>
                       		</a>
                       		</td>				

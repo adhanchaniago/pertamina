@@ -37,7 +37,7 @@ class Pegawai extends Pertamina
 	{
 		$this->page_title->push('Pegawai', 'Tambah Data Kepegawaian');
 
-		$this->form_validation->set_rules('nama', 'Nama Lengkap', 'trim|required');
+		$this->form_validation->set_rules('nama_pegawai', 'Nama Lengkap', 'trim|required');
 		$this->form_validation->set_rules('katagori', 'katagori', 'trim|required');
 
 		if ($this->form_validation->run() == TRUE)
@@ -61,7 +61,7 @@ class Pegawai extends Pertamina
 	{
 		$this->page_title->push('Pegawai', 'Update Data Kepegawaian');
 
-		$this->form_validation->set_rules('nama', 'Nama Lengkap', 'trim|required');
+		$this->form_validation->set_rules('nama_pegawai', 'Nama Lengkap', 'trim|required');
 		$this->form_validation->set_rules('katagori', 'katagori', 'trim|required');
 
 		if ($this->form_validation->run() == TRUE)
