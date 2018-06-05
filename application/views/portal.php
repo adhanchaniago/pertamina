@@ -22,8 +22,16 @@
 		@import url('https://fonts.googleapis.com/css?family=Archivo+Black|Nunito');
 
 		.font-opd {
-			font-size: 1em;
+			font-size: 3em;
 			margin-top: 10px;
+			font-weight: bold;
+			font-family: arial;
+		}
+		.text {
+			font-size: 2em;
+			margin-top: 10px;
+			font-weight: bold;
+			font-family: arial;
 		}
 		.blue-bg {
 			background: #2B6BAF;
@@ -74,11 +82,50 @@
 		}
 
 		.text-shadow {
-    		text-shadow: 2px 1px 2px  black;
+    		color: black;
 		}
 
 		.trigonal {
 			 background: url('<?php echo base_url("assets/images/trigonal.png"); ?>') repeat; 
+		}
+		.center {
+			margin-right: auto;
+			margin-left:auto;
+		}
+		.fullscreen-bg {
+		    position: fixed;
+		    top: 0;
+		    right: 0;
+		    bottom: 0;
+		    left: 0;
+		    overflow: hidden;
+		    z-index: -100;
+		}
+
+		.fullscreen-bg__video {
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;
+		}
+		.atas {
+			padding-top: -300px;
+		}
+		.border{
+			border: 1pt solid red;
+		}
+		.kiri{
+			width: 700px;
+			height: 200px;
+			margin-left: auto;
+		}
+		.kanan{
+			width: 700px;
+			height: 200px;
+			padding-left: 30px;
+			margin-right: auto;
+			margin-top: -205px;
 		}
 
 	</style>
@@ -100,13 +147,40 @@
 	</nav>
 	<div class="container">
 		<div class="row">			
-	  		<div class="col-md-12 text-center" >
-	  			<br>
-	  			<h2 class="welcome"><b>Selamat Datang di Sistem Informasi Penerimaan Karyawan Kementerian Komunikasi dan Informatika Bangka Belitung</b></h2> <br>
-	  		</div>
-			
+	  		<div class="col-md-12 center">
+	              <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" >
+	                <ol class="carousel-indicators">
+	                  <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+	                  <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+	                </ol>
+	             	<div class="carousel-inner fullscreen-bg">
+	                  <div class="item active">
+	                    <img width="100%" src="<?php echo base_url("assets/pertamina/img/gambar.png"); ?>" alt="Second slide">
+	                    <div class="border" style="margin-top: -950px;">
+	                    <p class="text-center font-opd">Pekerjaan Hari Ini</p>
+	                     <div class="kiri text">nadnfanfkjSecond Slide asfhfjhjkafhdfadnfknaknf  nadnfanfkjSecond Slide asfhfjhjkafhdfadnfknaknf  nadnfanfkjSecond Slide asfhfjhjkafhdfadnfknaknf  nadnfanfkjSecond Slide asfhfjhjkafhdfadnfknaknf  nadnfanfkjSecond Slide asfhfjhjkafhdfadnfknaknf  nadnfanfkjSecond Slide asfhfjhjkafhdfadnfknaknf  nadnfanfkjSecond Slide asfhfjhjkafhdfadnfknaknf</div> 
+	                     <div class="kanan text">nadnfanfkjSecond Slide asfhfjhjkafhdfadnfknaknf  nadnfanfkjSecond Slide asfhfjhjkafhdfadnfknaknf  nadnfanfkjSecond Slide asfhfjhjkafhdfadnfknaknf  nadnfanfkjSecond Slide asfhfjhjkafhdfadnfknaknf  nadnfanfkjSecond Slide asfhfjhjkafhdfadnfknaknf  nadnfanfkjSecond Slide asfhfjhjkafhdfadnfknaknf  nadnfanfkjSecond Slide asfhfjhjkafhdfadnfknaknf</div> 
+	                    </div>
+	                  </div>
 
-			
+					  <div class="item ">
+	                    <img width="100%" src="<?php echo base_url("assets/pertamina/img/gambar.png"); ?>" alt="Second slide">
+	                    <div style="border: 1pt solid black; margin-top: -950px;">
+	                    <p class=" text-center font-opd">Pekerjaan Hari Ini</p>
+	                     <div class="kiri text">nadnfanfkjSecond Slide asfhfjhjkafhdfadnfknaknf  nadnfanfkjSecond Slide asfhfjhjkafhdfadnfknaknf  nadnfanfkjSecond Slide asfhfjhjkafhdfadnfknaknf  nadnfanfkjSecond Slide asfhfjhjkafhdfadnfknaknf  nadnfanfkjSecond Slide asfhfjhjkafhdfadnfknaknf  nadnfanfkjSecond Slide asfhfjhjkafhdfadnfknaknf  nadnfanfkjSecond Slide asfhfjhjkafhdfadnfknaknf</div> 
+	                     <div class="kanan text">nadnfanfkjSecond Slide asfhfjhjkafhdfadnfknaknf  nadnfanfkjSecond Slide asfhfjhjkafhdfadnfknaknf  nadnfanfkjSecond Slide asfhfjhjkafhdfadnfknaknf  nadnfanfkjSecond Slide asfhfjhjkafhdfadnfknaknf  nadnfanfkjSecond Slide asfhfjhjkafhdfadnfknaknf  nadnfanfkjSecond Slide asfhfjhjkafhdfadnfknaknf  nadnfanfkjSecond Slide asfhfjhjkafhdfadnfknaknf</div> 
+	                    </div>
+	                    </div>
+	                  </div>
+	                </div> 
+	                 <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+	                  <span class="fa fa-angle-left" style="color: black"></span>
+	                </a>
+	                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+	                  <span class="fa fa-angle-right" style="color: black"></span>
+	                </a>
+	              </div>
+	  		</div>		
 		</div>
 	</div>
 <div class="navbar navbar-inverse navbar-fixed-bottom">
