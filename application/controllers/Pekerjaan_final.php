@@ -23,7 +23,7 @@ class Pekerjaan_final extends Pertamina
 			'title' => "Pekerjaan Final - Sistem Monitoring", 
 			'breadcrumbs' => $this->breadcrumbs->show(),
 			'page_title' => $this->page_title->show(),
-			'get' => $this->mpekerjaan_final->data()
+			'get' => $this->mpekerjaan_final->get()
 		);
 
 		$this->template->view('Pertamina/pekerjaan_final/data-pekerjaan_final', $this->data);
@@ -34,7 +34,7 @@ class Pekerjaan_final extends Pertamina
 		$this->page_title->push('Pekerjaan Final', 'Tambah Data Pekerjaan Final');
 
 		$this->form_validation->set_rules('id_pekerjaan', 'Nama Pekerjaan', 'trim|required');
-		$this->form_validation->set_rules('pegawai', 'Nama Pegawai', 'trim|required');
+		$this->form_validation->set_rules('id_pegawai[]', 'Nama Pegawai', 'trim|required');
 		$this->form_validation->set_rules('pengawas', 'Nama Pengawas', 'trim|required');
 		$this->form_validation->set_rules('tanggal', 'Tanggal', 'trim|required');
 		$this->form_validation->set_rules('id_kontraktor', 'Nama Kontraktor', 'trim|required');
@@ -68,8 +68,8 @@ class Pekerjaan_final extends Pertamina
 	{
 		$this->page_title->push('Pekerjaan Final', 'Update Data Pekerjaan Final');
 
-		$this->form_validation->set_rules('nama_pekerjaan', 'Nama Pekerjaan', 'trim|required');
-		$this->form_validation->set_rules('id_pegawai', 'Nama Pegawai', 'trim|required');
+		$this->form_validation->set_rules('id_pekerjaan', 'Nama Pekerjaan', 'trim|required');
+		$this->form_validation->set_rules('id_pegawai[]', 'Nama Pegawai', 'trim|required');
 		$this->form_validation->set_rules('pengawas', 'Nama Pengawas', 'trim|required');
 		$this->form_validation->set_rules('tanggal', 'Tanggal', 'trim|required');
 		$this->form_validation->set_rules('id_kontraktor', 'Nama Kontraktor', 'trim|required');
@@ -90,10 +90,10 @@ class Pekerjaan_final extends Pertamina
 			'title' => "Pekerjaan Final - Sistem Monitoring", 
 			'breadcrumbs' => $this->breadcrumbs->show(),
 			'page_title' => $this->page_title->show(),
-			'get_pekerjaan' => $this->mpekerjaan_final->get_pekerjaan(),
-			
-			'get_pegawai' => $this->mpekerjaan_final->get_pegawai(),
-			'get' => $this->mpekerjaan_final->get_kontraktor()
+			'data_edit' => $this->mpekerjaan_final->data_edit($param),
+			'get_pekerjaan' => $this->mpekerjaan_final->get_pekerjaan($param),
+			'get_pegawai' => $this->mpekerjaan_final->get_pegawai($param),
+			'get' => $this->mpekerjaan_final->get_kontraktor($param)
 			
 		);
 

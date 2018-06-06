@@ -1,5 +1,5 @@
 <pre>
-	<?php print_r($get) ?>
+	<?php print_r($this->mpekerjaan_final->data()) ?>
 </pre>
 <div class="row">
 	<div class="col-md-8 col-md-offset-2 col-xs-12"><?php echo $this->session->flashdata('alert'); ?></div>
@@ -81,8 +81,6 @@ echo form_close();
 					<thead class="bg-silver">
 						<tr>
 							<th class="text-center" style="width: 50px;">No</th>
-							<th class="text-center">Nama Pekerjaan</th>
-							<th class="text-center">Nama Pegawai</th>
 							<th class="text-center">Nama Pengawas</th>
 							<th class="text-center">Tanggal</th>
 							<th class="text-center">Nama Kontraktor</th>
@@ -95,22 +93,21 @@ echo form_close();
 						</tr>
 					</thead>
 					<tbody>
-						<?php foreach ($get as $key => $value): ?>
+						<?php foreach ($this->mpekerjaan_final->data() as $key => $value): ?>
 						<tr>
+							
 							<td class="text-center"><?php echo ++$key ?></td>
-							<td class="text-center"><?php echo $value->nama_pekerjaan ?></td>
-							<td class="text-center"><?php echo $value->id_pegawai ?></td>
-							<td class="text-center"><?php echo $value->pengawas ?></td>
-							<td class="text-center"><?php echo $value->tanggal ?></td>
-							<td class="text-center"><?php echo $value->nama ?></td>
+							<td class="text-center"><?php echo ucwords($this->mpekerjaan_final->get_pengawas($value->pengawas)->nama_pegawai) ?></td>
+							<td class="text-center"><?php echo date_id($value->tanggal) ?></td>
+							<td class="text-center"><?php echo ucwords($this->mpekerjaan_final->data_kontraktor($value->id_kontraktor)->nama) ?></td>
 							<td class="text-center"><?php echo $value->plan_target ?></td>
 							<td class="text-center"><?php echo $value->actual_target ?></td>
 							<td class="text-center"><?php echo $value->jam_mulai ?></td>
 							<td class="text-center"><?php echo $value->jam_selesai ?></td>
 							<td class="text-center"><?php echo $value->status ?></td>
 							<td>
+							<a href="<?php echo site_url("pekerjaan_final/update/{$value->id}") ?>" class="icon-button text-blue" data-toggle="tooltip" data-placement="top" title="Sunting"><i class="fa fa-user"></i></a>
 							<a href="<?php echo site_url("pekerjaan_final/update/{$value->id}") ?>" class="icon-button text-blue" data-toggle="tooltip" data-placement="top" title="Sunting"><i class="fa fa-pencil"></i></a>
-						
 							<a href="javascript:void(0)" id="delete-pekerjaan_final" data-id="<?php echo $value->id ?>" class="btn btn-xs btn-danger" data-toggle="tooltip" data-placement="top" title="Hapus">
                       		<i class="fa fa-trash-o"></i>
                       		</a>

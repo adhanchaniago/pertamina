@@ -1,4 +1,6 @@
-
+<!-- <pre>
+	<?php print_r($data_edit) ?>
+</pre> -->
 <div class="row">
 	<div class="col-md-8 col-md-offset-2 col-xs-12"><?php echo $this->session->flashdata('alert'); ?></div>
 	<div class="col-md-8 col-md-offset-2 col-xs-12">
@@ -19,21 +21,30 @@ echo form_open(current_url(), array('class' => 'form-horizontal'));
 						<select name="id_pekerjaan" class="form-control select2">
 							<option value="">-- PILIH --</option>
 							<?php foreach ($get_pekerjaan as $key => $value) :?>
-							<option value="<?php echo $value->id; ?>"><?php echo $value->nama_pekerjaan ?></option>
+							<option value="<?php echo $value->id; ?>" <?php if ($data_edit->id_pekerjaan == $value->id): ?>
+								selected
+							<?php endif ?>><?php echo $value->nama_pekerjaan ?></option>
 						<?php endforeach; ?>
 						</select>
 						<p class="help-block"><?php echo form_error('id_pekerjaan', '<small class="text-red">', '</small>'); ?></p>
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="level" class="control-label col-md-3 col-xs-12">Nama Pegawai  : <strong class="text-red">*</strong></label>
+					<label for="level" class="control-label col-md-3 col-xs-12">Nama Pegawai : <strong class="text-red">*</strong></label>
 					<div class="col-md-8">
-						<select name="pegawai" class="form-control select2">
+						<select name="id_pegawai[]" class="form-control select2" multiple="multiple">
 							<option value="">-- PILIH --</option>
-							<?php foreach ($this->mpekerjaan_final->get_pegawai('pekerja') as $key => $value) :?>
-							<option value="<?php echo $value->id; ?>"><?php echo $value->nama ?></option>
-						<?php endforeach; ?>
+							<?php 
+							$array = explode(",", $data_edit->id_pegawai);
+							foreach ($this->mpekerjaan_final->get_pegawai('pekerja') as $key => $value) : ?>
+								
+									<option value="<?php echo $value->id_pegawai; ?>"  <?php if (is_integer(array_search($value->id_pegawai, $array))): ?>
+										selected
+									<?php endif ?>><?php echo $value->nama_pegawai; ?></option>
+									
+							<?php endforeach; ?>
 						</select>
+						<p></p>
 						<p class="help-block"><?php echo form_error('pegawai', '<small class="text-red">', '</small>'); ?></p>
 					</div>
 				</div>
@@ -43,7 +54,9 @@ echo form_open(current_url(), array('class' => 'form-horizontal'));
 						<select name="pengawas" class="form-control select2">
 							<option value="">-- PILIH --</option>
 							<?php foreach ($this->mpekerjaan_final->get_pegawai('pengawas') as $key => $value) :?>
-							<option value="<?php echo $value->id; ?>"><?php echo $value->nama ?></option>
+							<option value="<?php echo $value->id_pegawai; ?>"<?php if ($data_edit->pengawas == $value->id_pegawai): ?> 
+							selected
+							<?php endif ?>><?php echo $value->nama_pegawai ?></option>
 						<?php endforeach; ?>
 						</select>
 						<p class="help-block"><?php echo form_error('pengawas', '<small class="text-red">', '</small>'); ?></p>
@@ -54,7 +67,7 @@ echo form_open(current_url(), array('class' => 'form-horizontal'));
 					<div class="col-md-8">
 					<div class="input-group">
 				    	<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-				    	<input type="text" class="form-control" name="tanggal" id="datepicker" value="<?php echo set_value('tgl_lahir'); ?>" placeholder="Ex : 1980-12-31">
+				    	<input type="text" class="form-control" name="tanggal" id="datepicker" value="<?php echo $data_edit->tanggal ?>" placeholder="Ex : 1980-12-31">
 				  	</div>
 					<p class="help-block"><?php echo form_error('tanggal', '<small class="text-red">', '</small>'); ?></p>
 					</div>
@@ -65,7 +78,9 @@ echo form_open(current_url(), array('class' => 'form-horizontal'));
 						<select name="id_kontraktor" class="form-control select2">
 							<option value="">-- PILIH --</option>
 							<?php foreach ($get as $key => $value) :?>
-							<option value="<?php echo $value->id; ?>"><?php echo $value->nama ?></option>
+							<option value="<?php echo $value->id; ?>"<?php if ($data_edit->id_kontraktor == $value->id): ?>
+								selected
+							<?php endif ?>><?php echo $value->nama ?></option>
 							<?php endforeach; ?>
 						</select>
 						<p class="help-block"><?php echo form_error('id_kontraktor', '<small class="text-red">', '</small>'); ?></p>
@@ -75,7 +90,7 @@ echo form_open(current_url(), array('class' => 'form-horizontal'));
 				<div class="form-group">
 					<label for="level" class="control-label col-md-3 col-xs-12">Plan Target: <strong class="text-red">*</strong></label>
 					<div class="col-md-8">
-						<input type="text" name="plan_target" class="form-control" value="<?php echo set_value('plan_target'); ?>">
+						<input type="text" name="plan_target" class="form-control" value="<?php echo $data_edit->plan_target ?>">
 						<p class="help-block"><?php echo form_error('plan_target', '<small class="text-red">', '</small>'); ?></p>
 					</div>
 				</div>
@@ -83,7 +98,7 @@ echo form_open(current_url(), array('class' => 'form-horizontal'));
 				<div class="form-group">
 					<label for="level" class="control-label col-md-3 col-xs-12">Actual Target: <strong class="text-red">*</strong></label>
 					<div class="col-md-8">
-						<input type="text" name="actual_target" class="form-control" value="<?php echo set_value('actual_target'); ?>">
+						<input type="text" name="actual_target" class="form-control" value="<?php echo $data_edit->actual_target; ?>">
 						<p class="help-block"><?php echo form_error('actual_target', '<small class="text-red">', '</small>'); ?></p>
 					</div>
 				</div>      
@@ -92,7 +107,7 @@ echo form_open(current_url(), array('class' => 'form-horizontal'));
 					<div class="col-md-8">
 					<div class="input-group bootstrap-timepicker">
 				    	<span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
-				    	<input type="text" class="form-control timepicker" name="jam_mulai" id="timepicker" value="<?php echo set_value('jam_mulai'); ?>">
+				    	<input type="text" class="form-control timepicker" name="jam_mulai" id="timepicker" value="<?php echo $data_edit->jam_mulai; ?>">
 				  	</div>
 					<p class="help-block"><?php echo form_error('jam_mulai', '<small class="text-red">', '</small>'); ?></p>
 					</div>
@@ -103,7 +118,7 @@ echo form_open(current_url(), array('class' => 'form-horizontal'));
 					<div class="col-md-8">
 					<div class="input-group bootstrap-timepicker">
 				    	<span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
-				    	<input type="text" class="form-control timepicker" name="jam_selesai" id="timepicker" value="<?php echo set_value('jam_selesai'); ?>">
+				    	<input type="text" class="form-control timepicker" name="jam_selesai" id="timepicker" value="<?php echo $data_edit->jam_selesai; ?>">
 				  	</div>
 					<p class="help-block"><?php echo form_error('jam_selesai', '<small class="text-red">', '</small>'); ?></p>
 					</div>
@@ -114,8 +129,8 @@ echo form_open(current_url(), array('class' => 'form-horizontal'));
 					<div class="col-md-4">
 						<select name="status" class="form-control select2">
 							<option value="">-- PILIH --</option>
-							<option value="opened" <?php if(set_value('status')=='opened') echo "selected"; ?>>Opened</option>
-							<option value="closed" <?php if(set_value('status')=='closed') echo "selected"; ?>>Closed</option>
+							<option value="opened" <?php if($data_edit->status=='opened') echo "selected"; ?>>Opened</option>
+							<option value="closed" <?php if($data_edit->status=='closed') echo "selected"; ?>>Closed</option>
 						</select>
 						<p class="help-block"><?php echo form_error('status', '<small class="text-red">', '</small>'); ?></p>
 					</div>

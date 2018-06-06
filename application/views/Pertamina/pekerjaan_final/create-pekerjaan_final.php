@@ -19,7 +19,7 @@ echo form_open(current_url(), array('class' => 'form-horizontal'));
 						<select name="id_pekerjaan" class="form-control select2">
 							<option value="">-- PILIH --</option>
 							<?php foreach ($get_pekerjaan as $key => $value) :?>
-							<option value="<?php echo $value->nama_pekerjaan; ?>"><?php echo $value->nama_pekerjaan ?></option>
+							<option value="<?php echo $value->id; ?>"><?php echo $value->nama_pekerjaan ?></option>
 						<?php endforeach; ?>
 						</select>
 						<p class="help-block"><?php echo form_error('id_pekerjaan', '<small class="text-red">', '</small>'); ?></p>
@@ -28,13 +28,13 @@ echo form_open(current_url(), array('class' => 'form-horizontal'));
 				<div class="form-group">
 					<label for="level" class="control-label col-md-3 col-xs-12">Nama Pegawai  : <strong class="text-red">*</strong></label>
 					<div class="col-md-8">
-						<select name="pegawai" class="form-control select2">
+						<select name="id_pegawai[]" class="form-control select2" multiple="multiple">
 							<option value="">-- PILIH --</option>
 							<?php foreach ($this->mpekerjaan_final->get_pegawai('pekerja') as $key => $value) :?>
 							<option value="<?php echo $value->id_pegawai; ?>"><?php echo $value->nama_pegawai ?></option>
 						<?php endforeach; ?>
 						</select>
-						<p class="help-block"><?php echo form_error('pegawai', '<small class="text-red">', '</small>'); ?></p>
+						<p class="help-block"><?php echo form_error('id_pegawai[]', '<small class="text-red">', '</small>'); ?></p>
 					</div>
 				</div>
 				<div class="form-group">
