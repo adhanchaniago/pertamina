@@ -34,12 +34,9 @@ class Mpekerjaan_final extends Pertamina_Model
 
 	public function data()
 	{
-		//$this->db->select('pekerjaan_final.*, pekerjaan_final.id AS id, kontraktor.id  AS nama_pekerjaan, pekerjaan_final.id  AS id');
+		$this->db->select();
 		$this->db->from('pekerjaan_final');
-		$this->db->join('pegawai', 'pegawai.id_pegawai = pekerjaan_final.id_pegawai', 'left');
 		$this->db->join('kontraktor', 'kontraktor.id_pegawai = pekerjaan_final.id_pegawai', 'left');
-		//$this->db->join('pekerjaan_final', 'pekerjaan.nama_pekerjaan = pekerjaan_fina.nama_pekerjaan', 'left');
-		
 		return $this->db->get()->result();
 
 	}
