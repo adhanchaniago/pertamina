@@ -44,7 +44,13 @@ class Mpekerjaan_final extends Pertamina_Model
 
 	public function data()
 	{
-		return $this->db->get('pekerjaan_final')->result();
+		return $this->db->get_where('pekerjaan_final')->result();
+
+	}
+
+	public function data_model($param = 0)
+	{
+		return $this->db->get_where('pekerjaan_final', array('id' => $param))->row();
 
 	}
 
@@ -124,6 +130,7 @@ class Mpekerjaan_final extends Pertamina_Model
 	
 	}
 
+	
 	public function delete($param = 0)
 	{
 		$this->db->delete('pekerjaan_final', array('id' => $param));
@@ -141,7 +148,6 @@ class Mpekerjaan_final extends Pertamina_Model
 			);
 		}
 	}
-
 }
 
 /* End of file Mpekerjaa_final.php */

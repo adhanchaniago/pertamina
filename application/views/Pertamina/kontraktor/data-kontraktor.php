@@ -5,7 +5,7 @@
 		<div class="box box-primary">
 			<div class="box-header with-border">
 				<div class="col-md-7">
-					<h3 class="box-title">Constitution Data</h3>
+					<h3 class="box-title">Contractor Data</h3>
 				</div>
 			</div>
 <?php  
@@ -79,8 +79,8 @@ echo form_close();
 					<thead class="bg-silver">
 						<tr>
 							<th class="text-center" style="width: 50px;">No</th>
-							<th class="text-center">Constitution name</th>
-							<th class="text-center">Type of Constitution</th>
+							<th class="text-center">Contractor name</th>
+							<th class="text-center">Type of Contractor</th>
 							<th class="text-center">Employee Name</th>
 							<th class="text-center">Director</th>
 							<th class="text-center">Secretary</th>

@@ -20,10 +20,10 @@ class Pegawai extends Pertamina
 	public function index() 
 	{
 
-		$this->page_title->push('Pegawai', 'Data Kepegawaian');
+		$this->page_title->push('Employee ', 'Employee Data');
 
 		$this->data = array(
-			'title' => "Kepegawaian - Sistem Monitoring", 
+			'title' => "Employee - Sistem Monitoring", 
 			'breadcrumbs' => $this->breadcrumbs->show(),
 			'page_title' => $this->page_title->show(),
 			'tampil' => $this->mpegawai->get_tampil()
@@ -35,7 +35,7 @@ class Pegawai extends Pertamina
 
 	public function create()
 	{
-		$this->page_title->push('Pegawai', 'Tambah Data Kepegawaian');
+		$this->page_title->push('Employee', 'Add Employee Data');
 
 		$this->form_validation->set_rules('nama_pegawai', 'Nama Lengkap', 'trim|required');
 		$this->form_validation->set_rules('katagori', 'katagori', 'trim|required');
@@ -48,7 +48,7 @@ class Pegawai extends Pertamina
 		}
 
 		$this->data = array(
-			'title' => "Kepegawaian - Sistem Monitoring", 
+			'title' => "Employee - Sistem Monitoring", 
 			'breadcrumbs' => $this->breadcrumbs->show(),
 			'page_title' => $this->page_title->show(),
 			
@@ -59,7 +59,7 @@ class Pegawai extends Pertamina
 
 	public function update($param = 0)
 	{
-		$this->page_title->push('Pegawai', 'Update Data Kepegawaian');
+		$this->page_title->push('Employee', 'Update Employee Data');
 
 		$this->form_validation->set_rules('nama_pegawai', 'Nama Lengkap', 'trim|required');
 		$this->form_validation->set_rules('katagori', 'katagori', 'trim|required');

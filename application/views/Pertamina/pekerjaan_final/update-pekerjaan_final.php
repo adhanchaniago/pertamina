@@ -88,20 +88,26 @@ echo form_open(current_url(), array('class' => 'form-horizontal'));
 				</div>
 
 				<div class="form-group">
-					<label for="level" class="control-label col-md-3 col-xs-12">Plan Target: <strong class="text-red">*</strong></label>
-					<div class="col-md-8">
-						<input type="text" name="plan_target" class="form-control" value="<?php echo $data_edit->plan_target ?>">
-						<p class="help-block"><?php echo form_error('plan_target', '<small class="text-red">', '</small>'); ?></p>
+					<label for="level" class="control-label col-md-3 col-xs-12">Plan Target : <strong class="text-red">*</strong></label>
+					<div class="col-md-6">
+					<div class="input-group">
+				    	<input type="text" class="form-control" name="plan_target" value="<?php echo $data_edit->plan_target ?>">
+				    	<span class="input-group-addon"><i class="fa fa-percent"></i></span>
+				  	</div>
+					<p class="help-block"><?php echo form_error('tanggal', '<small class="text-red">', '</small>'); ?></p>
 					</div>
 				</div>
 
 				<div class="form-group">
-					<label for="level" class="control-label col-md-3 col-xs-12">Actual Target: <strong class="text-red">*</strong></label>
-					<div class="col-md-8">
-						<input type="text" name="actual_target" class="form-control" value="<?php echo $data_edit->actual_target; ?>">
-						<p class="help-block"><?php echo form_error('actual_target', '<small class="text-red">', '</small>'); ?></p>
+					<label for="level" class="control-label col-md-3 col-xs-12">Actual Target : <strong class="text-red">*</strong></label>
+					<div class="col-md-6">
+					<div class="input-group">
+				    	<input type="text" class="form-control" name="actual_target" value="<?php echo $data_edit->actual_target ?>">
+				    	<span class="input-group-addon"><i class="fa fa-percent"></i></span>
+				  	</div>
+					<p class="help-block"><?php echo form_error('tanggal', '<small class="text-red">', '</small>'); ?></p>
 					</div>
-				</div>      
+				</div>  
                 <div class="form-group ">
 					<label for="level" class="control-label col-md-3 col-xs-12">Jam Mulai  : <strong class="text-red">*</strong></label>
 					<div class="col-md-8">

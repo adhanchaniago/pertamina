@@ -1,6 +1,3 @@
-<pre>
-	<?php print_r($this->mpekerjaan_final->data()) ?>
-</pre>
 <div class="row">
 	<div class="col-md-8 col-md-offset-2 col-xs-12"><?php echo $this->session->flashdata('alert'); ?></div>
 	<div class="col-md-12">
@@ -106,16 +103,14 @@ echo form_close();
 							<td class="text-center"><?php echo $value->jam_selesai ?></td>
 							<td class="text-center"><?php echo $value->status ?></td>
 							<td>
-							<a href="<?php echo site_url("pekerjaan_final/update/{$value->id}") ?>" class="icon-button text-blue" data-toggle="tooltip" data-placement="top" title="Sunting"><i class="fa fa-user"></i></a>
-							<a href="<?php echo site_url("pekerjaan_final/update/{$value->id}") ?>" class="icon-button text-blue" data-toggle="tooltip" data-placement="top" title="Sunting"><i class="fa fa-pencil"></i></a>
+							<a href="<?php echo site_url("pekerjaan_final/update/{$value->id}") ?>" class="icon-button text-blue" data-toggle="tooltip" data-placement="top" title="Sunting"><i class="glyphicon glyphicon-new-window"></i></a>
+							<a href="#" class="icon-button text-blue" data-toggle="modal" data-id="<?php echo $value->id ?>" data-target="#modal-default" data-placement="top" title="Sunting"><i class="fa fa-pencil"></i></a>
 							<a href="javascript:void(0)" id="delete-pekerjaan_final" data-id="<?php echo $value->id ?>" class="btn btn-xs btn-danger" data-toggle="tooltip" data-placement="top" title="Hapus">
                       		<i class="fa fa-trash-o"></i>
                       		</a>
 							</td>
 						</tr>
 						<?php endforeach ?>
-						
-						
 					</tbody>
 				</table>
 			</div>
@@ -139,4 +134,64 @@ echo form_close();
             </div>
         </div>
     </div>
+</div>
+
+
+<div class="modal fade" id="modal-default">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Input Data</h4>
+      </div>
+
+<?php  
+/**
+ * Open Form
+ *
+ * @var string
+ **/
+echo form_open(site_url("pekerjaan_final/update_model/{$value->id}"), array('class' => 'form-horizontal'));
+?>
+
+      <div class="modal-body">
+        <div class="form-group">
+			<label for="level" class="control-label col-md-3 col-xs-12">Actual Target : <strong class="text-red">*</strong></label>
+			<div class="modal-body">
+				<div class="col-md-6">
+				<div class="input-group" style="margin-top: -20px;">
+			    	<input type="text" class="form-control" name="actual_target" value="<?php echo $value->actual_target ?>">
+			    	<span class="input-group-addon"><i class="fa fa-percent"></i></span>
+			  	</div>
+			  	<p class="help-block"><?php echo form_error('actual_target', '<small class="text-red">', '</small>'); ?></p>
+			  	</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="level" class="control-label col-md-3 col-xs-12">Status : <strong class="text-red">*</strong></label>
+			<div class="modal-body">
+					<div class="col-md-8">
+						<div class="input-group" style="margin-top: -20px;">
+						<select name="status" class="form-control">
+							<option value="">-- PILIH --</option>
+							<option value="opened" <?php if($value->status=='opened') echo "selected"; ?>>Opened</option>
+							<option value="closed" <?php if($value->status=='closed') echo "selected"; ?>>Closed</option>
+						</select>
+						<p class="help-block"><?php echo form_error('status', '<small class="text-red">', '</small>'); ?></p>
+					</div>
+				</div>
+			</div>
+		</div>  
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default pull-left" data-dismiss="modal"><i class="ion ion-reply"></i> Kembali</button>
+        <button type="submit" name="submit" class="btn btn-primary"><i class="fa fa-save"></i> Simpan</button>
+        <?php  
+// End Form
+echo form_close();
+?>
+      </div>
+    </div>
+  </div>
 </div>

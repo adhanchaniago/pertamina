@@ -1,10 +1,10 @@
-<!-- <div class="row">
+ <div class="row">
     <div class="col-md-3">
         <div class="info-box bg-yellow">
             <span class="info-box-icon"><i class="fa fa-users"></i></span>
             <div class="info-box-content">
-                <span class="info-box-text">Jumlah Pelamar </span>
-                <span class="info-box-number"><small>calon Pelamar</small></span>
+                <span class="info-box-text">Karyawan</span>
+                <span class="info-box-number"><small></small></span>
                 <div class="progress">
                     <div class="progress-bar" style="width: 100%"></div>
                 </div>
@@ -15,7 +15,7 @@
         <div class="info-box bg-blue">
             <span class="info-box-icon"><i class="fa fa-child"></i></span>
             <div class="info-box-content">
-                <span class="info-box-text">Jumlah Penerima </span>
+                <span class="info-box-text">Pengawas</span>
                 <span class="info-box-number">50 <small>penerima</small></span>
                 <div class="progress">
                     <div class="progress-bar" style="width: 100%"></div>
@@ -52,4 +52,4 @@
      
 </div>
 
-    -->
+

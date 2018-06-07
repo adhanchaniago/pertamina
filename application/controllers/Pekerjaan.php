@@ -21,10 +21,10 @@ class Pekerjaan extends Pertamina
 	public function index() 
 	{
 
-		$this->page_title->push('Pekerjaan', 'Data Pekerjaan');
+		$this->page_title->push('Employment', 'Employment data');
 
 		$this->data = array(
-			'title' => "Data Pekerjaan - Sistem Monitoring", 
+			'title' => "'Employment data' - Sistem Monitoring", 
 			'breadcrumbs' => $this->breadcrumbs->show(),
 			'page_title' => $this->page_title->show(),
 			'pekerjaan' => $this->mpekerjaan->get_tampil()
@@ -36,7 +36,7 @@ class Pekerjaan extends Pertamina
 
 	public function create()
 	{
-		$this->page_title->push('Pegawai', 'Tambah Data Kepegawaian');
+		$this->page_title->push('Employment data', 'Add Employment Data');
 		$this->form_validation->set_rules('no_pekerjaan', 'Nomor Pekerjaan', 'trim|required');
 		$this->form_validation->set_rules('nama_pekerjaan', 'Nama Pekerjaan', 'trim|required');
 		$this->form_validation->set_rules('keterangan', 'Keterangan', 'trim|required');
@@ -49,7 +49,7 @@ class Pekerjaan extends Pertamina
 		}
 
 		$this->data = array(
-			'title' => "Kepegawaian - Sistem Monitoring", 
+			'title' => "Employment - Sistem Monitoring", 
 			'breadcrumbs' => $this->breadcrumbs->show(),
 			'page_title' => $this->page_title->show(),
 			
@@ -60,7 +60,7 @@ class Pekerjaan extends Pertamina
 
 	public function update($param = 0)
 	{
-		$this->page_title->push('Pekerjaan', 'Update Data Pekerjaan');
+		$this->page_title->push('Employment', 'Update Employment Data');
 
 		$this->form_validation->set_rules('no_pekerjaan', 'Nomor Pekerjaan', 'trim|required');
 		$this->form_validation->set_rules('nama_pekerjaan', 'Nama Pekerjaan', 'trim|required');

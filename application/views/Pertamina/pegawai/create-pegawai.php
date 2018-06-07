@@ -13,14 +13,14 @@ echo form_open(current_url(), array('class' => 'form-horizontal'));
 			<div class="box-body" style="margin-top: 10px;">
 			
 				<div class="form-group">
-					<label for="nama" class="control-label col-md-3 col-xs-12">Nama Pegawai: <strong class="text-red">*</strong></label>
+					<label for="nama" class="control-label col-md-3 col-xs-12">Employee Name: <strong class="text-red">*</strong></label>
 					<div class="col-md-8">
 						<input type="text" name="nama_pegawai" class="form-control" value="<?php echo set_value('nama_pegawai'); ?>">
 						<p class="help-block"><?php echo form_error('nama_pegawai', '<small class="text-red">', '</small>'); ?></p>
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="level" class="control-label col-md-3 col-xs-12">Katagori: <strong class="text-red">*</strong></label>
+					<label for="level" class="control-label col-md-3 col-xs-12">Category: <strong class="text-red">*</strong></label>
 					<div class="col-md-8">
 						<select name="katagori" class="form-control">
 							<option value="">-- PILIH --</option>
@@ -35,12 +35,12 @@ echo form_open(current_url(), array('class' => 'form-horizontal'));
 			<div class="box-footer with-border">
 				<div class="col-md-4 col-xs-5">
 					<a href="<?php echo site_url('pegawai') ?>" class="btn btn-app pull-right">
-						<i class="ion ion-reply"></i> Kembali
+						<i class="ion ion-reply"></i> Back
 					</a>
 				</div>
 				<div class="col-md-6 col-xs-6">
 					<button type="submit" class="btn btn-app pull-right">
-						<i class="fa fa-save"></i> Simpan
+						<i class="fa fa-save"></i> Save
 					</button>
 				</div>
 			</div>

@@ -26,6 +26,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <link rel="stylesheet" href="<?php echo base_url("assets/public/plugins/bootstrap-checkbox/awesome-bootstrap-checkbox.min.css"); ?>">
   <link rel="stylesheet" href="<?php echo base_url("assets/public/plugins/datepicker/datepicker3.min.css"); ?>">
 
+<link rel="stylesheet" href="<?php echo base_url('assets/public/plugins/morris/charlie-table.css') ?>">
+<link rel="stylesheet" href="<?php echo base_url('assets/public/plugins/morris/morris.css'); ?>">
+
   <link rel="stylesheet" href="<?php echo base_url("assets/public/plugins/timepicker/bootstrap-timepicker.min.css"); ?>">
 
 <style type="text/css">.color{background-color: #A1A1A1;}</style>
@@ -63,6 +66,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <script src="<?php echo base_url("assets/public/plugins/autocomplete/tautocomplete.js"); ?>"></script>
   <script src="<?php echo base_url("assets/public/plugins/select2/select2.full.min.js"); ?>"></script>
   <script src="<?php echo base_url("assets/public/app/form-wizard.js"); ?>"></script>
+
+  <script src="<?php echo base_url('assets/public/plugins/morris/raphael-min.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/public/plugins/morris/morris.min.js'); ?>"></script>
+
   <script type="text/javascript"> 
       var base_url   = '<?php echo site_url(); ?>';
       var base_path  = '<?php echo base_url('assets/public'); ?>';

@@ -17,13 +17,17 @@ class Pekerjaan_final extends Pertamina
 	}
 	public function index()
 	{
-		$this->page_title->push('Pekerjaan Final', 'Data Pekerjaan Final');
+		$this->page_title->push('Pekerjaan Hari ini', 'Data Pekerjaan Hari ini');
 
 		$this->data = array(
-			'title' => "Pekerjaan Final - Sistem Monitoring", 
+			'title' => "Pekerjaan Hari ini - Sistem Monitoring", 
 			'breadcrumbs' => $this->breadcrumbs->show(),
 			'page_title' => $this->page_title->show(),
-			'get' => $this->mpekerjaan_final->get()
+			'get' => $this->mpekerjaan_final->get(),
+			'data_edit' => $this->mpekerjaan_final->data_edit(),
+			'get_pekerjaan' => $this->mpekerjaan_final->get_pekerjaan(),
+			'get_pegawai' => $this->mpekerjaan_final->get_pegawai(),
+			'get' => $this->mpekerjaan_final->get_kontraktor()
 		);
 
 		$this->template->view('Pertamina/pekerjaan_final/data-pekerjaan_final', $this->data);
@@ -31,7 +35,7 @@ class Pekerjaan_final extends Pertamina
 
 	public function create()
 	{
-		$this->page_title->push('Pekerjaan Final', 'Tambah Data Pekerjaan Final');
+		$this->page_title->push('Pekerjaan Hari ini', 'Tambah Data Pekerjaan Hari ini');
 
 		$this->form_validation->set_rules('id_pekerjaan', 'Nama Pekerjaan', 'trim|required');
 		$this->form_validation->set_rules('id_pegawai[]', 'Nama Pegawai', 'trim|required');
@@ -51,7 +55,7 @@ class Pekerjaan_final extends Pertamina
 		}
 
 		$this->data = array(
-			'title' => "Pekerjaan Final - Sistem Monitoring", 
+			'title' => "Pekerjaan Hari ini - Sistem Monitoring", 
 			'breadcrumbs' => $this->breadcrumbs->show(),
 			'page_title' => $this->page_title->show(),
 			'get_pekerjaan' => $this->mpekerjaan_final->get_pekerjaan(),
@@ -66,7 +70,7 @@ class Pekerjaan_final extends Pertamina
 
 	public function update($param = 0)
 	{
-		$this->page_title->push('Pekerjaan Final', 'Update Data Pekerjaan Final');
+		$this->page_title->push('Pekerjaan Hari ini', 'Update Data Pekerjaan Hari ini');
 
 		$this->form_validation->set_rules('id_pekerjaan', 'Nama Pekerjaan', 'trim|required');
 		$this->form_validation->set_rules('id_pegawai[]', 'Nama Pegawai', 'trim|required');
@@ -87,7 +91,7 @@ class Pekerjaan_final extends Pertamina
 		}
 
 		$this->data = array(
-			'title' => "Pekerjaan Final - Sistem Monitoring", 
+			'title' => "Pekerjaan Hari ini - Sistem Monitoring", 
 			'breadcrumbs' => $this->breadcrumbs->show(),
 			'page_title' => $this->page_title->show(),
 			'data_edit' => $this->mpekerjaan_final->data_edit($param),
@@ -98,6 +102,48 @@ class Pekerjaan_final extends Pertamina
 		);
 
 		$this->template->view('Pertamina/pekerjaan_final/update-pekerjaan_final', $this->data);
+	}
+
+	public function update_model($param = 0)
+	{
+		$this->page_title->push('Pekerjaan Hari ini', 'Update Data Pekerjaan Hari ini');
+
+		$this->form_validation->set_rules('actual_target', 'Actual Target', 'trim|required');
+		$this->form_validation->set_rules('status', 'Status', 'trim|required');
+
+		if ($this->form_validation->run() == TRUE)
+		{
+			$data = array(
+			'actual_target' => $this->input->post('actual_target'),
+			'status' => $this->input->post('status'),
+			);
+
+		$this->db->update('pekerjaan_final', $data, array('id' => $param));
+
+			if($this->db->affected_rows())
+			{
+				$this->template->alert(
+					' Data Pekerjaan Update.', 
+					array('type' => 'success','icon' => 'check')
+				);
+			} else {
+				$this->template->alert(
+					' Data Gagal Di Update.', 
+					array('type' => 'warning','icon' => 'warning')
+				);
+			}
+
+		}
+
+		$this->data = array(
+			'title' => "Pekerjaan Hari ini - Sistem Monitoring", 
+			'breadcrumbs' => $this->breadcrumbs->show(),
+			'page_title' => $this->page_title->show(),
+			'data' => $this->mpekerjaan_final->data($param),
+			
+		);
+
+		$this->template->view('Pertamina/pekerjaan_final/data-pekerjaan_final', $this->data);
 	}
 
 	public function delete($param = 0)

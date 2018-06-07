@@ -78,9 +78,9 @@ echo form_close();
 					<thead class="bg-silver">
 						<tr>
 							<th class="text-center"  style="width: 50px;">No</th>
-							<th class="text-center">Nomor Pekerjaan</th>
-							<th class="text-center">Nama Pekerjaan</th>
-							<th class="text-center">Keterangan</th>
+							<th class="text-center">Employment Number</th>
+							<th class="text-center">Employment Name</th>
+							<th class="text-center">Information</th>
 							<th></th>
 						</tr>
 					</thead>

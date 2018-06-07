@@ -13,14 +13,14 @@ echo form_open(current_url(), array('class' => 'form-horizontal'));
 			<div class="box-body" style="margin-top: 10px;">
 			
 				<div class="form-group">
-					<label for="nama" class="control-label col-md-3 col-xs-12">Constitution name  : <strong class="text-red">*</strong></label>
+					<label for="nama" class="control-label col-md-3 col-xs-12">Contractor name  : <strong class="text-red">*</strong></label>
 					<div class="col-md-8">
 						<input type="text" name="nama" class="form-control" value="<?php echo $get->nama; ?>">
 						<p class="help-block"><?php echo form_error('nama', '<small class="text-red">', '</small>'); ?></p>
 					</div>
 				</div>
 				<div class="form-group">
-				<label for="level" class="control-label col-md-3 col-xs-12">Type of Constitution : <strong class="text-red">*</strong></label>
+				<label for="level" class="control-label col-md-3 col-xs-12">Type of Contractor : <strong class="text-red">*</strong></label>
 					<div class="col-md-8">
 						<input type="text" name="jenis" class="form-control" value="<?php echo $get->jenis; ?>">
 						<p class="help-block"><?php echo form_error('jenis', '<small class="text-red">', '</small>'); ?></p>
