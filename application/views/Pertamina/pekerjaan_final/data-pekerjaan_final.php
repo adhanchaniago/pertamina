@@ -102,9 +102,12 @@ echo form_close();
 							<td class="text-center"><?php echo $value->jam_mulai ?></td>
 							<td class="text-center"><?php echo $value->jam_selesai ?></td>
 							<td class="text-center"><?php echo $value->status ?></td>
+							<td class="text-center"><?php if ($value->jam_selesai >= FALSE): ?><span class="label label-success">Lembur<span><?php endif ?></td>
+							
 							<td>
-							<a href="<?php echo site_url("pekerjaan_final/update/{$value->id}") ?>" class="icon-button text-blue" data-toggle="tooltip" data-placement="top" title="Sunting"><i class="glyphicon glyphicon-new-window"></i></a>
-							<a href="#" class="icon-button text-blue" data-toggle="modal" data-id="<?php echo $value->id ?>" data-target="#modal-default" data-placement="top" title="Sunting"><i class="fa fa-pencil"></i></a>
+							
+							<a href="#" class="btn btn-xs btn-primary" data-toggle="modal" data-id="<?php echo $value->id ?>" data-target="#modal-default" data-placement="top" title="Sunting"><i class="glyphicon glyphicon-new-window"></i></a>
+							<a href="<?php echo site_url("pekerjaan_final/update/{$value->id}") ?>" class="btn btn-xs btn-success" data-toggle="tooltip" data-placement="top" title="Sunting"><i class="fa fa-pencil"></i></a>
 							<a href="javascript:void(0)" id="delete-pekerjaan_final" data-id="<?php echo $value->id ?>" class="btn btn-xs btn-danger" data-toggle="tooltip" data-placement="top" title="Hapus">
                       		<i class="fa fa-trash-o"></i>
                       		</a>
@@ -140,7 +143,7 @@ echo form_close();
 <div class="modal fade" id="modal-default">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
+      <div class="modal-header bg-primary">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title">Input Data</h4>
