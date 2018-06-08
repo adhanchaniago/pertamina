@@ -29,6 +29,10 @@ class Mpekerjaan_final extends Pertamina_Model
 		return $this->db->get('pegawai' , array('id_pegawai' => $katagori ))->result();
 	}
 
+	public function dashboard($param = 0)
+	{
+		return $this->db->get_where('pegawai' , array('katagori' => $param ))->row();
+	}
 	public function get_kontraktor()
 	{
 		return $this->db->get('kontraktor')->result();
@@ -78,6 +82,7 @@ class Mpekerjaan_final extends Pertamina_Model
 			'jam_mulai' => $this->input->post('jam_mulai'),
 			'jam_selesai' => $this->input->post('jam_selesai'),
 			'status' => $this->input->post('status'),
+			'sekarang' => date("Y-m-d H:i:s"),
 
 		);
 

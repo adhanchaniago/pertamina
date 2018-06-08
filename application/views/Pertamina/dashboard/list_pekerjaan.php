@@ -7,7 +7,6 @@
   		  <div class="title-p">PEKERJAAN HARI INI</div>
   		  <div class="date-picker"><?php echo date_id($value->tanggal) ?><!-- <?php include('date_picker.php') ?> --></div>
   	</div>
- 
       	<div class="to-do">
           
       		<table border="0" class="tb_item" align="center">
@@ -43,16 +42,14 @@
              				<td>Pekerja</td>
              				<td>:</td>
              				<td>
-             					<ol>
-                        <?php 
-                          $array = explode(",", $value->id_pegawai);
-                          foreach ($this->mpekerjaan_final->get_pegawai() as $key => $value) { ?>
-                            <li><?php echo $value->nama_pegawai; ?></li>
-                          <?php } ?>
-             					</ol>
+     				       <?php 
+                     $array =  explode(",", $value->id_pegawai); 
+                    foreach ($array as $key => $values) : ?>
+                    <li><?php echo ucwords($this->mpekerjaan_final->get_pengawas($values)->nama_pegawai) ?></li>
+                    <?php endforeach; ?>
              				</td>
              				<td>Selesai <br> Durasi</td>
-             				<td>: <?php echo $value->jam_selesai ?> WIB<br>:</td>
+             				<td>: <?php echo $value->jam_selesai ?> WIB<br>: <?php echo $value->jam_selesai ?></td>
           	  		</tr>
             	 	 	<tr valign="top">
             		  		<td colspan="5">
@@ -60,7 +57,7 @@
             	  				<tr align="left" valign="top">
             	  					<td>Pekerjaan Hari Ini :
             	  						<ol >
-            	  							<li><?php echo ucwords($this->mpekerjaan_final->get_edit($value->id_pekerjaan)->nama_pekerjaan) ?></li>
+            	  							<li><?php echo ucwords($this->mpekerjaan_final->data_kontraktor($value->id_kontraktor)->jenis) ?></li>
             	  						</ol>
             	  					</td>
             	  					<td>Keterangan

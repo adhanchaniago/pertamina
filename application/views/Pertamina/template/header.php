@@ -96,16 +96,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       "info": true,
       "autoWidth": false
     });
-        $('.timepicker').timepicker({
-      showInputs: false
-    });
-  });
+    
+ $('.timepicker').timepicker({
+       minuteStep: 5,
+        showInputs: false,
+        disableFocus: true,
+        showMeridian: false,
+        defaultTime: 'value'
+    })
 
   // $(function () {
   //   $('.timepicker').timepicker({
   //     showInputs: false
   //   });
-  // });
+ });
 
 </script>  
 </head>

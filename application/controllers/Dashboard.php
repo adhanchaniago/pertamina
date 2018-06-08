@@ -18,7 +18,12 @@ class Dashboard extends Pertamina
 	}
 	public function index() 
 	{
-		$this->load->view('Pertamina/slider_pertamina');
+		$this->data = array(
+			'title' => "Pertamin", 
+			'get_data' => $this->mpekerjaan_final->data_edit(),
+		);
+
+		$this->load->view('Pertamina/slider_pertamina', $this->data);
 	}
 
 }

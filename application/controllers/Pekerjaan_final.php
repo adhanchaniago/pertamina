@@ -17,10 +17,10 @@ class Pekerjaan_final extends Pertamina
 	}
 	public function index()
 	{
-		$this->page_title->push('Pekerjaan Hari ini', 'Data Pekerjaan Hari ini');
+		$this->page_title->push('Today work', 'Employment Data Today');
 
 		$this->data = array(
-			'title' => "Pekerjaan Hari ini - Sistem Monitoring", 
+			'title' => "Today work - Sistem Monitoring", 
 			'breadcrumbs' => $this->breadcrumbs->show(),
 			'page_title' => $this->page_title->show(),
 			'get' => $this->mpekerjaan_final->get(),
@@ -35,7 +35,7 @@ class Pekerjaan_final extends Pertamina
 
 	public function create()
 	{
-		$this->page_title->push('Pekerjaan Hari ini', 'Tambah Data Pekerjaan Hari ini');
+		$this->page_title->push('Today work', 'Add Job Data Today');
 
 		$this->form_validation->set_rules('id_pekerjaan', 'Nama Pekerjaan', 'trim|required');
 		$this->form_validation->set_rules('id_pegawai[]', 'Nama Pegawai', 'trim|required');
@@ -55,7 +55,7 @@ class Pekerjaan_final extends Pertamina
 		}
 
 		$this->data = array(
-			'title' => "Pekerjaan Hari ini - Sistem Monitoring", 
+			'title' => "Today work - Sistem Monitoring", 
 			'breadcrumbs' => $this->breadcrumbs->show(),
 			'page_title' => $this->page_title->show(),
 			'get_pekerjaan' => $this->mpekerjaan_final->get_pekerjaan(),
@@ -70,7 +70,7 @@ class Pekerjaan_final extends Pertamina
 
 	public function update($param = 0)
 	{
-		$this->page_title->push('Pekerjaan Hari ini', 'Update Data Pekerjaan Hari ini');
+		$this->page_title->push('Today work', 'Update Data Work Today');
 
 		$this->form_validation->set_rules('id_pekerjaan', 'Nama Pekerjaan', 'trim|required');
 		$this->form_validation->set_rules('id_pegawai[]', 'Nama Pegawai', 'trim|required');
@@ -91,7 +91,7 @@ class Pekerjaan_final extends Pertamina
 		}
 
 		$this->data = array(
-			'title' => "Pekerjaan Hari ini - Sistem Monitoring", 
+			'title' => "Today work - Sistem Monitoring", 
 			'breadcrumbs' => $this->breadcrumbs->show(),
 			'page_title' => $this->page_title->show(),
 			'data_edit' => $this->mpekerjaan_final->data_edit($param),

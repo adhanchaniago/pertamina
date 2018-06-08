@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Pertamina</title>
+    <title><?php  echo (isset($title)) ? $title : "Sistem KEMKOMINFO"; ?> :: <?php echo $this->session->userdata('ADMIN')->nama ?></title>
+    <link rel="shortcut icon" type="image/png" href="<?php echo base_url('assets/public/image/pertamina.png') ?>"/>
     <link rel="stylesheet" href="<?php echo base_url("assets/pertamina/Slider/slider/vendor/bootstrap/css/bootstrap.min.css"); ?>">
     <link rel="stylesheet" href="<?php echo base_url("assets/pertamina/Slider/slider/css/full-slider.css"); ?>">
     <link rel="stylesheet" href="<?php echo base_url("assets/pertamina/Slider/file/clock.css"); ?>">
@@ -30,6 +31,7 @@
               </div>
             </li>
           </ul>
+
         </div>
       </div>
     </nav>
