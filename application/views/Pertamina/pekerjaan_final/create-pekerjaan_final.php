@@ -14,7 +14,7 @@ echo form_open(current_url(), array('class' => 'form-horizontal'));
 			<div class="box-body" style="margin-top: 10px;">
 			
 				<div class="form-group">
-					<label for="nama" class="control-label col-md-3 col-xs-12">Nama Pekerjaan : <strong class="text-red">*</strong></label>
+					<label for="nama" class="control-label col-md-3 col-xs-12">Job Name : <strong class="text-red">*</strong></label>
 					<div class="col-md-8">
 						<select name="id_pekerjaan" class="form-control select2">
 							<option value="">-- PILIH --</option>
@@ -26,7 +26,7 @@ echo form_open(current_url(), array('class' => 'form-horizontal'));
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="level" class="control-label col-md-3 col-xs-12">Nama Pegawai  : <strong class="text-red">*</strong></label>
+					<label for="level" class="control-label col-md-3 col-xs-12">Employee Name  : <strong class="text-red">*</strong></label>
 					<div class="col-md-8">
 						<select name="id_pegawai[]" class="form-control select2" multiple="multiple">
 							<option value="">-- PILIH --</option>
@@ -38,7 +38,7 @@ echo form_open(current_url(), array('class' => 'form-horizontal'));
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="level" class="control-label col-md-3 col-xs-12">Nama Pengawas  : <strong class="text-red">*</strong></label>
+					<label for="level" class="control-label col-md-3 col-xs-12">Name of Supervisor  : <strong class="text-red">*</strong></label>
 					<div class="col-md-8">
 						<select name="pengawas" class="form-control select2">
 							<option value="">-- PILIH --</option>
@@ -50,7 +50,7 @@ echo form_open(current_url(), array('class' => 'form-horizontal'));
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="level" class="control-label col-md-3 col-xs-12">Tanggal  : <strong class="text-red">*</strong></label>
+					<label for="level" class="control-label col-md-3 col-xs-12">Date  : <strong class="text-red">*</strong></label>
 					<div class="col-md-8">
 					<div class="input-group">
 				    	<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
@@ -60,7 +60,7 @@ echo form_open(current_url(), array('class' => 'form-horizontal'));
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="level" class="control-label col-md-3 col-xs-12">Nama Kontraktor  : <strong class="text-red">*</strong></label>
+					<label for="level" class="control-label col-md-3 col-xs-12">Contractor Name  : <strong class="text-red">*</strong></label>
 					<div class="col-md-8">
 						<select name="id_kontraktor" class="form-control select2">
 							<option value="">-- PILIH --</option>
@@ -83,7 +83,7 @@ echo form_open(current_url(), array('class' => 'form-horizontal'));
 				</div>
 				              
                 <div class="form-group ">
-					<label for="level" class="control-label col-md-3 col-xs-12">Jam Mulai  : <strong class="text-red">*</strong></label>
+					<label for="level" class="control-label col-md-3 col-xs-12">Start Time  : <strong class="text-red">*</strong></label>
 					<div class="col-md-8">
 					<div class="input-group bootstrap-timepicker">
 				    	<span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
@@ -94,7 +94,7 @@ echo form_open(current_url(), array('class' => 'form-horizontal'));
 				</div> 
 
 				 <div class="form-group ">
-					<label for="level" class="control-label col-md-3 col-xs-12">Jam Selesai  : <strong class="text-red">*</strong></label>
+					<label for="level" class="control-label col-md-3 col-xs-12">Finish Time  : <strong class="text-red">*</strong></label>
 					<div class="col-md-8">
 					<div class="input-group bootstrap-timepicker">
 				    	<span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
@@ -121,12 +121,12 @@ echo form_open(current_url(), array('class' => 'form-horizontal'));
 			<div class="box-footer with-border">
 				<div class="col-md-4 col-xs-5">
 					<a href="<?php echo site_url('pekerjaan_final') ?>" class="btn btn-app pull-right">
-						<i class="ion ion-reply"></i> Kembali
+						<i class="ion ion-reply"></i> Back
 					</a>
 				</div>
 				<div class="col-md-6 col-xs-6">
 					<button type="submit" class="btn btn-app pull-right">
-						<i class="fa fa-save"></i> Simpan
+						<i class="fa fa-save"></i> Save
 					</button>
 				</div>
 			</div>

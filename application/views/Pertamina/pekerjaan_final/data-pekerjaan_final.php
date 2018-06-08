@@ -1,10 +1,11 @@
+
 <div class="row">
 	<div class="col-md-8 col-md-offset-2 col-xs-12"><?php echo $this->session->flashdata('alert'); ?></div>
 	<div class="col-md-12">
 		<div class="box box-primary">
 			<div class="box-header with-border">
 				<div class="col-md-7">
-					<h3 class="box-title">Data Pekerjaan Final</h3>
+					<h3 class="box-title">Today's work Data</h3>
 				</div>
 			</div>
 <?php  
@@ -39,7 +40,7 @@ echo form_open(current_url(), array('method' => 'get'));
 				</div>
 				<div class="pull-right">
 				
-					<a href="<?php echo site_url('pekerjaan_final/create') ?>" class="btn btn-warning hvr-shadow btn-flat btn-sm"><i class="fa fa-plus"></i> Tambah Baru</a>
+					<a href="<?php echo site_url('pekerjaan_final/create') ?>" class="btn btn-warning hvr-shadow btn-flat btn-sm"><i class="fa fa-plus"></i> Add</a>
 				
 				</div>
 			</div>
@@ -78,14 +79,15 @@ echo form_close();
 					<thead class="bg-silver">
 						<tr>
 							<th class="text-center" style="width: 50px;">No</th>
-							<th class="text-center">Nama Pengawas</th>
-							<th class="text-center">Tanggal</th>
-							<th class="text-center">Nama Kontraktor</th>
+							<th class="text-center">Name of Supervisor</th>
+							<th class="text-center">date</th>
+							<th class="text-center">Contractor Name</th>
 							<th class="text-center">Plan Target</th>
 							<th class="text-center">Actual Target</th>
-							<th class="text-center">Jam Mulai</th>
-							<th class="text-center">Jam Selesai</th>
+							<th class="text-center">Start Time</th>
+							<th class="text-center">Finish Time</th>
 							<th class="text-center">Status</th>
+							<th></th>
 							<th></th>
 						</tr>
 					</thead>
@@ -102,8 +104,7 @@ echo form_close();
 							<td class="text-center"><?php echo $value->jam_mulai ?></td>
 							<td class="text-center"><?php echo $value->jam_selesai ?></td>
 							<td class="text-center"><?php echo $value->status ?></td>
-							<td class="text-center"><?php if ($value->jam_selesai >= FALSE): ?><span class="label label-success">Lembur<span><?php endif ?></td>
-							
+							<td class="text-center"><?php if($value->jam_selesai == TRUE): ?><span class="label label-success">Lembur<span><?php endif ?></td>	
 							<td>
 							
 							<a href="#" class="btn btn-xs btn-primary" data-toggle="modal" data-id="<?php echo $value->id ?>" data-target="#modal-default" data-placement="top" title="Sunting"><i class="glyphicon glyphicon-new-window"></i></a>
@@ -117,6 +118,7 @@ echo form_close();
 					</tbody>
 				</table>
 			</div>
+			
 		</div>
 	</div>
 </div>

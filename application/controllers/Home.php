@@ -25,7 +25,4 @@ class Home extends Pertamina {
 
 		$this->template->view('Pertamina/v_home', $this->data);
 	}
-
-
-
 }

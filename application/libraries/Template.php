@@ -28,6 +28,7 @@ class Template
         }
     }
 
+
     public function alert($message, $config)
     {
         $animated = 'fadeIn';

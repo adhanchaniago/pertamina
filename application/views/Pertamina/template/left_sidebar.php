@@ -26,6 +26,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <i class="fa fa-home"></i> <span>Home</span>
         </a>
       </li>
+      <li class="<?php echo active_link_method('index','Dashboard'); ?>">
+        <a href="<?php  echo site_url('Dashboard') ?>">
+          <i class="fa fa-home"></i> <span>Dashboard</span>
+        </a>
+      </li>
       <li class="<?php echo active_link_controller('index','pekerjaan_final').active_link_controller('pekerjaan_final','create').active_link_controller('pekerjaan_final','update') ?>">
         <a href="<?php echo site_url('pekerjaan_final') ?>"><i class="glyphicon glyphicon-ok-sign"></i>Today's work</a>
       </li>

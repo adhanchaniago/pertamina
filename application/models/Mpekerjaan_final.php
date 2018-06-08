@@ -6,7 +6,7 @@ class Mpekerjaan_final extends Pertamina_Model
 
 	public function get_pekerjaan()
 	{
-		return $this->db->get('pekerjaan')->result();
+		return $this->db->get_where('pekerjaan')->result();
 	}
 
 	public function get_pegawai($param = '')
