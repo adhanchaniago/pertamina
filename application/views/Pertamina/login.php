@@ -39,12 +39,11 @@
 		  box-sizing: content-box;
 		  cursor: pointer;
 		  border: none;
-		  font: normal 2em/normal "arial", Helvetica, sans-serif;
+		  font: normal 1,5em/normal "arial", Helvetica, sans-serif;
 		  color: rgba(255,255,255,1);
 		  text-align: center;
 		  -o-text-overflow: clip;
 		  text-overflow: clip;
-		  text-shadow: 0 1px 0 rgb(204,204,204) , 0 2px 0 rgb(201,201,201) , 0 3px 0 rgb(187,187,187) , 0 4px 0 rgb(185,185,185) , 0 5px 0 rgb(170,170,170) , 0 6px 1px rgba(0,0,0,0.0980392) , 0 0 5px rgba(0,0,0,0.0980392) , 0 1px 3px rgba(0,0,0,0.298039) , 0 3px 5px rgba(0,0,0,0.2) , 0 5px 10px rgba(0,0,0,0.247059) , 0 10px 10px rgba(0,0,0,0.2) , 0 20px 20px rgba(0,0,0,0.14902) ;
 		  -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
 		  -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
 		  -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
@@ -53,7 +52,6 @@
 
 		.enjoy-css:hover {
 		  color: #EEB715;
-		  text-shadow: 0 1px 0 rgba(255,255,255,1) , 0 2px 0 rgba(255,255,255,1) , 0 3px 0 rgba(255,255,255,1) , 0 4px 0 rgba(255,255,255,1) , 0 5px 0 rgba(255,255,255,1) , 0 6px 1px rgba(0,0,0,0.0980392) , 0 0 5px rgba(0,0,0,0.0980392) , 0 1px 3px rgba(0,0,0,0.298039) , 0 3px 5px rgba(0,0,0,0.2) , 0 -5px 10px rgba(0,0,0,0.247059) , 0 -7px 10px rgba(0,0,0,0.2) , 0 -15px 20px rgba(0,0,0,0.14902) ;
 		  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
 		  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
 		  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
@@ -91,12 +89,12 @@
 	<nav class="navbar navbar-default" role="navigation">
 		<div class="container">
 			<div class="navbar-header">
-                <img src="<?php echo base_url("assets/public/image/logo.png"); ?>" class="logo-head" alt="Logo" width="300">
+                <img src="<?php echo base_url("assets/public/image/logo.png"); ?>" class="logo-head" alt="Logo" width="180">
 			</div>
-			<div class="col-md-2 pull-right" style="margin-top: 15px; margin-left: 50px;">
+			<div class="col-md-2 pull-right" style="margin-top: 5px;">
 				<a href="<?php echo base_url('login') ?>"><h3 class="profile-username text-center font-arial enjoy-css">Login</h3></a>
 			</div>
-			<div class="col-md-1 pull-right" style="margin-top: 15px; ">
+			<div class="col-md-1 pull-right" style="margin-top: 5px; ">
 				<a href="<?php echo base_url('main') ?>"><h3 class="profile-username text-center font-arial enjoy-css">Beranda</h3></a>
 			</div>
 		</div>
@@ -104,7 +102,7 @@
 	</nav>
 	
 	<div class="container">
-		<div class="col-md-4 col-md-offset-4 box-login ">
+		<div class="col-md-4 col-md-offset-4 box-login pull-right">
 	      	<?php  
 	      	/**
 	      	 * undocumented class variable

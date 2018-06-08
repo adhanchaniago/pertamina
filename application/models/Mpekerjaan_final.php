@@ -102,6 +102,10 @@ class Mpekerjaan_final extends Pertamina_Model
 		}
 	
 	}
+	public function durasi($jam_mulai ='', $jam_selesai ='')
+	{
+		return (strtotime($jam_mulai)-strtotime($jam_selesai));
+	}
 
 	public function update($param = 0)
 	{

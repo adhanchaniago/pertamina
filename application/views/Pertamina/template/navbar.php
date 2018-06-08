@@ -4,9 +4,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body  class="hold-transition skin-sakip sidebar-mini fixed">
    <div id="load"></div>
    <div class="wrapper">
-      <header class="main-header">
+      <header class="main-header bg-blue">
          <a href="<?php echo site_url('home') ?>" class="logo">
-            <img width="45%" src="<?php echo base_url("assets/public/image/logo.png"); ?>" class="logo-head pull-left" alt="Logo">
+            <img width="40%" src="<?php echo base_url("assets/public/image/logo.png"); ?>" class="logo-head pull-left" alt="Logo">
          </a>
          <nav class="navbar navbar-static-top">
          <div class="navbar-custom-menu">

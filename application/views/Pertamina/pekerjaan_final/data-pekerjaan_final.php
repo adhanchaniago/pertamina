@@ -1,4 +1,4 @@
-
+<!-- <pre><?php print_r(date('H:i:s')) ?></pre> -->
 <div class="row">
 	<div class="col-md-8 col-md-offset-2 col-xs-12"><?php echo $this->session->flashdata('alert'); ?></div>
 	<div class="col-md-12">
@@ -104,7 +104,7 @@ echo form_close();
 							<td class="text-center"><?php echo $value->jam_mulai ?></td>
 							<td class="text-center"><?php echo $value->jam_selesai ?></td>
 							<td class="text-center"><?php echo $value->status ?></td>
-							<td class="text-center"><?php if($value->jam_selesai == '16:01:00'): ?><span class="label label-success">Lembur<span><?php endif ?></td>	
+							<td class="text-center"><?php if($value->jam_selesai >= date('H:i:s')): ?><span class="label label-success">Lembur<span><?php endif ?></td>	
 							<td>
 							
 							<a href="#" class="btn btn-xs btn-primary" data-toggle="modal" data-id="<?php echo $value->id ?>" data-target="#modal-default" data-placement="top" title="Sunting"><i class="glyphicon glyphicon-new-window"></i></a>

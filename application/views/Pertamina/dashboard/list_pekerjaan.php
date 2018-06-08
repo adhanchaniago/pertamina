@@ -49,7 +49,7 @@
                     <?php endforeach; ?>
              				</td>
              				<td>Selesai <br> Durasi</td>
-             				<td>: <?php echo $value->jam_selesai ?> WIB<br>: <?php echo $value->jam_selesai ?></td>
+             				<td>: <?php echo $value->jam_selesai ?> WIB<br>:</td>
           	  		</tr>
             	 	 	<tr valign="top">
             		  		<td colspan="5">
