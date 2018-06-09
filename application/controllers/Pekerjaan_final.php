@@ -5,11 +5,18 @@ class Pekerjaan_final extends Pertamina
 {
 	public $page = 20;
 
+	public $data = array();
+	
+	public $query;
+
 	public function __construct()
 	{
 		parent::__construct();
 		$this->per_page = (!$this->input->get('per_page')) ? 20: $this->input->get('per_page');
 		$this->page = $this->input->get('page');
+		$this->tanggal = $this->input->get('tanggal');
+
+		$this->query = $this->input->get('query');
 
 		$this->load->model('mjson_location');
 		$this->load->js(base_url('assets/public/app/pekerjaan_final.js'));

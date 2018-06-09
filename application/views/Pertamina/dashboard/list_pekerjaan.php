@@ -49,7 +49,12 @@
                     <?php endforeach; ?>
              				</td>
              				<td>Selesai <br> Durasi</td>
-             				<td>: <?php echo $value->jam_selesai ?> WIB<br>:</td>
+             				<td>: <?php echo $value->jam_selesai ?> WIB
+                            <br>: <?php date_default_timezone_set('Asia/Jakarta');
+                            $awal  = date_create($value->jam_mulai);
+                            $akhir = date_create($value->jam_selesai); // waktu sekarang, pukul 06:13
+                            $diff  = date_diff( $akhir, $awal );
+                            echo $diff->h; // Hasil: 5 ?> Jam</td>
           	  		</tr>
             	 	 	<tr valign="top">
             		  		<td colspan="5">
@@ -70,7 +75,6 @@
             	  		</td>
             	  	</tr>
        		</table>
-          
        	</div>
 
     </div>

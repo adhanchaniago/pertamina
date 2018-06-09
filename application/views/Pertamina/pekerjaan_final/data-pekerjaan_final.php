@@ -17,56 +17,28 @@
 echo form_open(current_url(), array('method' => 'get'));
 ?>
 			<div class="box-body">
-				<div class="col-md-4">
-					Tampilkan 
-					<select name="per_page" class="form-control input-sm" style="width:60px; display: inline-block;" onchange="window.location = '<?php echo site_url('pegawai?per_page='); ?>' + this.value + '&query=<?php echo $this->input->get('query'); ?>&village=<?php echo $this->input->get('village'); ?>';">
-					<?php  
-					/**
-					 * Loop 10 to 100
-					 * Guna untuk limit data yang ditampilkan
-					 * 
-					 * @var 10
-					 **/
-					$start = 20; 
-					while($start <= 100) :
-						$selected = ($start == $this->input->get('per_page')) ? 'selected' : '';
-						echo "<option value='{$start}' " . $selected . ">{$start}</option>";
-
-						$start += 10;
-					endwhile;
-					?>
-					</select>
-					per halaman
-				</div>
 				<div class="pull-right">
-				
 					<a href="<?php echo site_url('pekerjaan_final/create') ?>" class="btn btn-warning hvr-shadow btn-flat btn-sm"><i class="fa fa-plus"></i> Add</a>
-				
 				</div>
 			</div>
 
 			<div class="box-body">
 				<div class="col-md-2">
 				    <div class="form-group">
-				        <label>Level :</label>
-				        <select name="level" class="form-control input-sm">
-				        	<option value="">-- PILIH --</option>
-				        	<!-- <option value="Admin" <?php if($this->input->get('level')=='Admin') echo 'selected'; ?>>Admin</option>
-				        	<option value="Username" <?php if($this->input->get('level')=='Username') echo 'selected'; ?>>Username</option> -->
-				        </select>	
+				        <label>Date :</label>
+				        <input type="text" class="form-control" name="tanggal" id="datepicker" placeholder="Ex : 1980-12-31">
 				    </div>
 				</div>
-
 				<div class="col-md-3">
 				    <div class="form-group">
-				        <label>Kata Kunci :</label>
+				        <label>Name of Supervisor  :</label>
 				        <input type="text" name="query" class="form-control input-sm" value="<?php echo $this->input->get('query') ?>" placeholder="Username / Nama Lengkap / Email . . . ">
 				    </div>
 				</div>
 				<div class="col-md-3">
 				    <div class="form-group">
                     <button type="submit" class="btn btn-warning hvr-shadow top"><i class="fa fa-filter"></i> Filter</button>
-                    <a href="<?php echo site_url('konteraktor') ?>" class="btn btn-warning hvr-shadow top" style="margin-left: 10px;"><i class="fa fa-times"></i> Reset</a>
+                    <a href="<?php echo site_url('pekerjaan_final') ?>" class="btn btn-warning hvr-shadow top" style="margin-left: 10px;"><i class="fa fa-times"></i> Reset</a>
 				    </div>
 				</div>
 			</div>
@@ -87,10 +59,11 @@ echo form_close();
 							<th class="text-center">Start Time</th>
 							<th class="text-center">Finish Time</th>
 							<th class="text-center">Status</th>
-							<th></th>
+							<th class="text-center">Keterangan</th>
 							<th></th>
 						</tr>
 					</thead>
+
 					<tbody>
 						<?php foreach ($this->mpekerjaan_final->data() as $key => $value): ?>
 						<tr>
@@ -104,8 +77,9 @@ echo form_close();
 							<td class="text-center"><?php echo $value->jam_mulai ?></td>
 							<td class="text-center"><?php echo $value->jam_selesai ?></td>
 							<td class="text-center"><?php echo $value->status ?></td>
-							<td class="text-center"><?php if($value->jam_selesai >= date('H:i:s')): ?><span class="label label-success">Lembur<span><?php endif ?></td>	
-							<td>
+							<td class="text-center"><?php if($value->jam_selesai >= ('16:01')): ?><span class="label label-success">Lembur<span><?php endif ?></td>
+							
+							<td >
 							
 							<a href="#" class="btn btn-xs btn-primary" data-toggle="modal" data-id="<?php echo $value->id ?>" data-target="#modal-default" data-placement="top" title="Sunting"><i class="glyphicon glyphicon-new-window"></i></a>
 							<a href="<?php echo site_url("pekerjaan_final/update/{$value->id}") ?>" class="btn btn-xs btn-success" data-toggle="tooltip" data-placement="top" title="Sunting"><i class="fa fa-pencil"></i></a>
