@@ -91,12 +91,12 @@
 			<div class="navbar-header">
                 <img src="<?php echo base_url("assets/public/image/logo.png"); ?>" class="logo-head" alt="Logo" width="180">
 			</div>
-			<div class="col-md-2 pull-right" style="margin-top: 5px;">
+			<!-- <div class="col-md-2 pull-right" style="margin-top: 5px;">
 				<a href="<?php echo base_url('login') ?>"><h3 class="profile-username text-center font-arial enjoy-css">Login</h3></a>
-			</div>
-			<div class="col-md-1 pull-right" style="margin-top: 5px; ">
+			</div> -->
+			<!-- <div class="col-md-1 pull-right" style="margin-top: 5px; ">
 				<a href="<?php echo base_url('main') ?>"><h3 class="profile-username text-center font-arial enjoy-css">Beranda</h3></a>
-			</div>
+			</div> -->
 		</div>
 	
 	</nav>

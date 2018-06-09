@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Mdashboard extends Pertamina_Model 
+class Mdashboard extends CI_model 
 {
 
 	public function data_edit($param = 0)

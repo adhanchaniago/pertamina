@@ -1,7 +1,9 @@
+
 <?php foreach ($this->mpekerjaan_final->data() as $key => $value): ?>
 <div class="carousel-item <?php if (++$key == 1): ?>
   active
 <?php endif ?> " style="background-image: url('#')">
+
   <div class="carousel-caption d-md-block slider_item">
   	<div class="tittle" >
   		  <div class="title-p">PEKERJAAN HARI INI</div>

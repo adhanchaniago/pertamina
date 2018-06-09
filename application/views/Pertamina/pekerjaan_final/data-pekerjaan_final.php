@@ -8,44 +8,29 @@
 					<h3 class="box-title">Today's work Data</h3>
 				</div>
 			</div>
-<?php  
-/**
- * Start Form Pencarian
- *
- * @return string
- **/
-echo form_open(current_url(), array('method' => 'get'));
-?>
 			<div class="box-body">
 				<div class="pull-right">
 					<a href="<?php echo site_url('pekerjaan_final/create') ?>" class="btn btn-warning hvr-shadow btn-flat btn-sm"><i class="fa fa-plus"></i> Add</a>
 				</div>
 			</div>
 
-			<div class="box-body">
-				<div class="col-md-2">
-				    <div class="form-group">
-				        <label>Date :</label>
-				        <input type="text" class="form-control" name="tanggal" id="datepicker" placeholder="Ex : 1980-12-31">
-				    </div>
-				</div>
-				<div class="col-md-3">
-				    <div class="form-group">
-				        <label>Name of Supervisor  :</label>
-				        <input type="text" name="query" class="form-control input-sm" value="<?php echo $this->input->get('query') ?>" placeholder="Username / Nama Lengkap / Email . . . ">
-				    </div>
-				</div>
-				<div class="col-md-3">
-				    <div class="form-group">
-                    <button type="submit" class="btn btn-warning hvr-shadow top"><i class="fa fa-filter"></i> Filter</button>
-                    <a href="<?php echo site_url('pekerjaan_final') ?>" class="btn btn-warning hvr-shadow top" style="margin-left: 10px;"><i class="fa fa-times"></i> Reset</a>
-				    </div>
+		<?php echo form_open(current_url(), array('method' => 'GET')); ?>
+			<div class="box-header">
+				<div class="col-md-12">
+					<div class="col-md-4">
+						<input type="text" class="form-control" name="query" placeholder="Pencarian...." value="<?php echo $this->input->get('query') ?>">
+					</div>
+					<div class="col-md-3">
+						<button type="submit" class="btn btn-warning hvr-shadow btn-flat btn-sm" id="search"><i class="fa fa-search"></i> Cari Data</button>
+						<a href="<?php echo base_url('pekerjaan_final') ?>" class="btn btn-warning hvr-shadow btn-flat btn-sm" id="reset-form"><i class="fa fa-times"></i> Reset</a>
+					</div>
+					<div class="col-md-3 pull-right">
+						<a href="#" class="btn btn-warning hvr-shadow btn-flat btn-sm btn-print" id="reset-form"><i class="fa fa-print"></i> Cetak</a>
+					</div>
 				</div>
 			</div>
-<?php  
-// End form pencarian
-echo form_close();
-?>
+			<?php echo form_close(); ?>
+
 			<div class="box-body">
 				<table class="table table-hover table-bordered" >
 					<thead class="bg-silver">
@@ -78,10 +63,10 @@ echo form_close();
 							<td class="text-center"><?php echo $value->jam_selesai ?></td>
 							<td class="text-center"><?php echo $value->status ?></td>
 							<td class="text-center"><?php if($value->jam_selesai >= ('16:01')): ?><span class="label label-success">Lembur<span><?php endif ?></td>
-							
+
 							<td >
 							
-							<a href="#" class="btn btn-xs btn-primary" data-toggle="modal" data-id="<?php echo $value->id ?>" data-target="#modal-default" data-placement="top" title="Sunting"><i class="glyphicon glyphicon-new-window"></i></a>
+							<a href="#" class="btn btn-xs btn-primary" data-toggle="modal"  data-target="#modal-default" data-placement="top" title="Sunting"><i class="glyphicon glyphicon-new-window"></i></a>
 							<a href="<?php echo site_url("pekerjaan_final/update/{$value->id}") ?>" class="btn btn-xs btn-success" data-toggle="tooltip" data-placement="top" title="Sunting"><i class="fa fa-pencil"></i></a>
 							<a href="javascript:void(0)" id="delete-pekerjaan_final" data-id="<?php echo $value->id ?>" class="btn btn-xs btn-danger" data-toggle="tooltip" data-placement="top" title="Hapus">
                       		<i class="fa fa-trash-o"></i>

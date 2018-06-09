@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title><?php  echo (isset($title)) ? $title : "Sistem KEMKOMINFO"; ?> :: <?php echo $this->session->userdata('ADMIN')->nama ?></title>
+    <title><?php  echo (isset($title)) ? $title : "Sistem KEMKOMINFO"; ?></title>
     <link rel="shortcut icon" type="image/png" href="<?php echo base_url('assets/public/image/pertamina.png') ?>"/>
     <link rel="stylesheet" href="<?php echo base_url("assets/pertamina/Slider/slider/vendor/bootstrap/css/bootstrap.min.css"); ?>">
     <link rel="stylesheet" href="<?php echo base_url("assets/pertamina/Slider/slider/css/full-slider.css"); ?>">
@@ -39,7 +39,7 @@
         <!-- ini adalah isi yang di loop -->
         
           <?php include('dashboard/list_pekerjaan.php') ?>
-  
+          
         <!-- ini adalah isi yang di loop -->
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -59,9 +59,13 @@
   </footer>
     <!-- Bootstrap core JavaScript -->
     <script src="<?php echo base_url("assets/pertamina/Slider/slider/vendor/jquery/jquery.min.js"); ?>"></script>
+    <script src="<?php echo base_url("assets/pertamina/Slider/slider/vendor/jquery/jquery-2.1.1.min.js"); ?>"></script>
     <script src="<?php echo base_url("assets/pertamina/Slider/slider/vendor/bootstrap/js/bootstrap.bundle.min.js"); ?>"></script> 
     <script src="<?php echo base_url("assets/pertamina/Slider/file/vue.min.js"); ?>"></script> 
-    <script src="<?php echo base_url("assets/pertamina/Slider/file/clock.js"); ?>"></script> 
+    <script src="<?php echo base_url("assets/pertamina/Slider/file/clock.js"); ?>"></script>
+    <script>
+       setTimeout(function(){
+           location.reload();
+       },60000); // 5000 milliseconds atau 5 seconds.
+    </script>
   </body>
-
-</html>

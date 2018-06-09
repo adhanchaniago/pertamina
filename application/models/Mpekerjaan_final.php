@@ -3,17 +3,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Mpekerjaan_final extends Pertamina_Model 
 {
+	public function __construct()
+
+	{
+		parent::__construct();
+	}
+
 	public function get_all($limit = 20, $offset = 0, $type = 'result')
 	{
-		if($this->input->get('tanggal') != '')
-			$this->db->where('tanggal', $this->input->get('tanggal'));
-		
 		if($this->input->get('query') != '')
-			$this->db->like('nama_pekerjaan', $this->input->get('query'))
-					 ->or_like('pengawas', $this->input->get('query'))
-					 ->or_like('id_kontraktor', $this->input->get('query'));
-
-		
+			$this->db->like('tanggal', $this->input->get('query'))
+					 ->or_like('tanggal', $this->input->get('query'));
 		
 		if($type == 'result')
 		{
