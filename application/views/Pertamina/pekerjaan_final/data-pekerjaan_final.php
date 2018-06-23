@@ -46,7 +46,7 @@
 							<th class="text-center">Finish</th>
 							<!-- <th class="text-center">Status</th> -->
 							<th class="text-center">Keterangan</th>
-							<th></th>
+							<th class="text-center"></th>
 							<th></th>
 						</tr>
 					</thead>

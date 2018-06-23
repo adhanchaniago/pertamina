@@ -40,7 +40,7 @@ echo form_open(current_url(), array('method' => 'get'));
 				</div>
 				<div class="pull-right">
 				
-					<a href="<?php echo site_url('konteraktor/create') ?>" class="btn btn-warning hvr-shadow btn-flat btn-sm"><i class="fa fa-plus"></i> Add</a>
+					<a href="<?php echo site_url('Konteraktor/create') ?>" class="btn btn-warning hvr-shadow btn-flat btn-sm"><i class="fa fa-plus"></i> Add</a>
 				
 				</div>
 			</div>
