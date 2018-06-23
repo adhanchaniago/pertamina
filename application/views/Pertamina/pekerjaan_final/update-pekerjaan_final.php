@@ -94,7 +94,7 @@ echo form_open(current_url(), array('class' => 'form-horizontal'));
 				    	<input type="text" class="form-control" name="plan_target" value="<?php echo $data_edit->plan_target ?>">
 				    	<span class="input-group-addon"><i class="fa fa-percent"></i></span>
 				  	</div>
-					<p class="help-block"><?php echo form_error('tanggal', '<small class="text-red">', '</small>'); ?></p>
+					<p class="help-block"><?php echo form_error('plan_target', '<small class="text-red">', '</small>'); ?></p>
 					</div>
 				</div>
 
@@ -105,7 +105,7 @@ echo form_open(current_url(), array('class' => 'form-horizontal'));
 				    	<input type="text" class="form-control" name="actual_target" value="<?php echo $data_edit->actual_target ?>">
 				    	<span class="input-group-addon"><i class="fa fa-percent"></i></span>
 				  	</div>
-					<p class="help-block"><?php echo form_error('tanggal', '<small class="text-red">', '</small>'); ?></p>
+					<p class="help-block"><?php echo form_error('actual_target', '<small class="text-red">', '</small>'); ?></p>
 					</div>
 				</div>  
                 <div class="form-group ">

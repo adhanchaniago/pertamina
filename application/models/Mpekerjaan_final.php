@@ -49,6 +49,11 @@ class Mpekerjaan_final extends Pertamina_Model
 		return $this->db->get('pegawai' , array('id_pegawai' => $katagori ))->result();
 	}
 
+	public function tampil_pekerjaan($param = 0)
+	{
+		return $this->db->get_where('pekerjaan', array('id' => $param))->result();
+	}
+
 	public function dashboard($param = 0)
 	{
 		return $this->db->get_where('pegawai' , array('katagori' => $param ))->row();

@@ -146,7 +146,7 @@
 	      			Silahkan masukkan alamat email Anda. Anda akan menerima sebuah tautan untuk membuat password baru melalui email.
 	      		</div>
 	      		<?php else : 
-	      			echo $this->session->flashdata('alert');
+	      			echo $this->session->flashdata('alert'); 
 	      		endif;
 	      		?>
 	      	</div>
@@ -169,8 +169,8 @@
 
 <div class="navbar navbar-inverse navbar-fixed-bottom">
    <div class="container">
-      <small class="navbar-text pull-left">&copy; Kementerian Komunikasi dan Informatikan Provinsi Kepuluan Bangka Belitung</small>
-      <small class="navbar-text pull-right">Develop By 1422500233 - Yuranda</small>
+      <small class="navbar-text pull-left">&copy; 2018 <?php if(date('Y')!=2018) echo "- ".date('Y'); ?> Pertamina BBM Pangkalbalam</small>
+      <small class="navbar-text pull-right">Developer by : Teitra Mega 2018</small>
    </div>
 </div>	
 

@@ -14,7 +14,7 @@ echo form_open(current_url(), array('class' => 'form-horizontal'));
 			<div class="box-body" style="margin-top: 10px;">
 			
 				<div class="form-group">
-					<label for="nama" class="control-label col-md-3 col-xs-12">Job Name : <strong class="text-red">*</strong></label>
+					<label for="nama" class="control-label col-md-3 col-xs-12">Employment : <strong class="text-red">*</strong></label>
 					<div class="col-md-8">
 						<select name="id_pekerjaan" class="form-control select2">
 							<option value="">-- PILIH --</option>

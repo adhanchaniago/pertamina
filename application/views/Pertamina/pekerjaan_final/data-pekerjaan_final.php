@@ -1,4 +1,4 @@
-<!-- <pre><?php print_r(date('H:i:s')) ?></pre> -->
+<!-- <pre><?php print_r($this->mpekerjaan_final->data()) ?></pre> -->
 <div class="row">
 	<div class="col-md-8 col-md-offset-2 col-xs-12"><?php echo $this->session->flashdata('alert'); ?></div>
 	<div class="col-md-12">
@@ -36,15 +36,17 @@
 					<thead class="bg-silver">
 						<tr>
 							<th class="text-center" style="width: 50px;">No</th>
-							<th class="text-center">Name of Supervisor</th>
-							<th class="text-center">date</th>
-							<th class="text-center">Contractor Name</th>
-							<th class="text-center">Plan Target</th>
-							<th class="text-center">Actual Target</th>
-							<th class="text-center">Start Time</th>
-							<th class="text-center">Finish Time</th>
-							<th class="text-center">Status</th>
+							<th class="text-center">Employment </th>
+							<!-- <th class="text-center">date</th> -->
+							<th class="text-center">Contractor</th>
+							<!-- <th class="text-center">Plan Target</th>
+							<th class="text-center">Actual Target</th> -->
+							<th class="text-center">Today Activities </th>
+							<th class="text-center">Start</th>
+							<th class="text-center">Finish</th>
+							<!-- <th class="text-center">Status</th> -->
 							<th class="text-center">Keterangan</th>
+							<th></th>
 							<th></th>
 						</tr>
 					</thead>
@@ -54,14 +56,28 @@
 						<tr>
 							
 							<td class="text-center"><?php echo ++$key ?></td>
-							<td class="text-center"><?php echo ucwords($this->mpekerjaan_final->get_pengawas($value->pengawas)->nama_pegawai) ?></td>
-							<td class="text-center"><?php echo date_id($value->tanggal) ?></td>
+
+							<td class="text-center">
+							<?php 
+		                    $array =  explode(",", $value->id_pegawai); 
+		                    foreach ($array as $key => $values) : ?>
+		                    <li class="text-left"><?php echo ucwords($this->mpekerjaan_final->get_pengawas($values)->nama_pegawai) ?></li>
+		                    <?php endforeach; ?>
+							</td>
+							<!-- <td class="text-center"><?php echo date_id($value->tanggal) ?></td> -->
 							<td class="text-center"><?php echo ucwords($this->mpekerjaan_final->data_kontraktor($value->id_kontraktor)->nama) ?></td>
-							<td class="text-center"><?php echo $value->plan_target ?></td>
-							<td class="text-center"><?php echo $value->actual_target ?></td>
+							<td class="text-center"><?php echo ucwords($this->mpekerjaan_final->get_edit($value->id_pekerjaan)->nama_pekerjaan) ?></td>
+							<!-- <td class="text-center"><?php echo $value->plan_target ?></td>
+							<td class="text-center"><?php echo $value->actual_target ?></td> -->
 							<td class="text-center"><?php echo $value->jam_mulai ?></td>
 							<td class="text-center"><?php echo $value->jam_selesai ?></td>
-							<td class="text-center"><?php echo $value->status ?></td>
+							<!-- <td class="text-center"><?php echo $value->status ?></td> -->
+							<td class="text-center">
+								<ol>
+									<li><?php echo ucwords($this->mpekerjaan_final->get_edit($value->id_pekerjaan)->keterangan) ?></li>
+									<li><?php echo ucwords($this->mpekerjaan_final->get_edit($value->id_pekerjaan)->detail_keterangan) ?></li>
+								</ol>
+							</td>
 							<td class="text-center"><?php if($value->jam_selesai >= ('16:01')): ?><span class="label label-success">Lembur<span><?php endif ?></td>
 
 							<td >

@@ -37,9 +37,10 @@ class Pekerjaan extends Pertamina
 	public function create()
 	{
 		$this->page_title->push('Employment data', 'Add Employment Data');
-		$this->form_validation->set_rules('no_pekerjaan', 'Nomor Pekerjaan', 'trim|required');
-		$this->form_validation->set_rules('nama_pekerjaan', 'Nama Pekerjaan', 'trim|required');
-		$this->form_validation->set_rules('keterangan', 'Keterangan', 'trim|required');
+		$this->form_validation->set_rules('no_pekerjaan', 'Employment Number', 'trim|required');
+		$this->form_validation->set_rules('nama_pekerjaan', 'Employment Name', 'trim|required');
+		$this->form_validation->set_rules('keterangan', 'Information details', 'trim|required');
+		$this->form_validation->set_rules('detail_keterangan', 'Detail Keterangan', 'trim|required');
 
 		if ($this->form_validation->run() == TRUE)
 		{
@@ -65,7 +66,7 @@ class Pekerjaan extends Pertamina
 		$this->form_validation->set_rules('no_pekerjaan', 'Nomor Pekerjaan', 'trim|required');
 		$this->form_validation->set_rules('nama_pekerjaan', 'Nama Pekerjaan', 'trim|required');
 		$this->form_validation->set_rules('keterangan', 'Keterangan', 'trim|required');
-
+		$this->form_validation->set_rules('detail_keterangan', 'Detail Keterangan', 'trim|required');
 
 		if ($this->form_validation->run() == TRUE)
 		{

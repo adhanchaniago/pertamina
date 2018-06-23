@@ -26,7 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
      <small><strong></strong></small>
     </div>
    <div class="container">
-      <small>&copy; 2017 <?php if(date('Y')!=2017) echo "- ".date('Y'); ?> Pertamina Provinsi Kepuluan Bangka Belitung Develop By TeitraMega<small>
+      <small>&copy; 2018 <?php if(date('Y')!=2018) echo "- ".date('Y'); ?> Pertamina BBM Pangkalbalam Develop By TeitraMega<small>
    </div>
 </footer>
 

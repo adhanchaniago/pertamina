@@ -24,7 +24,8 @@ class Mpekerjaan extends Pertamina_model
 		$data = array(
 			'no_pekerjaan' => $this->input->post('no_pekerjaan'),
 			'nama_pekerjaan' => $this->input->post('nama_pekerjaan'), 
-			'keterangan' => $this->input->post('keterangan'),  
+			'keterangan' => $this->input->post('keterangan'),
+			'detail_keterangan' => $this->input->post('detail_keterangan'),  
 			
 		);
 
@@ -52,7 +53,7 @@ class Mpekerjaan extends Pertamina_model
 			'no_pekerjaan' => $this->input->post('no_pekerjaan'),
 			'nama_pekerjaan' => $this->input->post('nama_pekerjaan'), 
 			'keterangan' => $this->input->post('keterangan'),  
-			
+			'detail_keterangan' => $this->input->post('detail_keterangan'),
 		);
 
 		$this->db->update('pekerjaan', $data, array('id' => $param));

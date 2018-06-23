@@ -13,7 +13,7 @@
           
       		<table border="0" class="tb_item" align="center">
         			<tr valign="top">
-         				<td colspan="5"><h2><font face="Arial Black"><?php echo ucwords($this->mpekerjaan_final->data_kontraktor($value->id_kontraktor)->nama) ?></font></h2></td>
+         				<td colspan="5"><h2><font face="Arial Black"><?php echo ucwords($this->mpekerjaan_final->get_edit($value->id_pekerjaan)->nama_pekerjaan) ?> </font></h2></td>
         			</tr>
 
         			<tr align="left" valign="top">
@@ -27,7 +27,7 @@
         			<tr align="left" valign="top">
          				<td>Pelaksana</td>
          				<td>:</td>
-         				<td><?php echo ucwords($this->mpekerjaan_final->get_edit($value->id_pekerjaan)->nama_pekerjaan) ?></td>
+         				<td><?php echo ucwords($this->mpekerjaan_final->data_kontraktor($value->id_kontraktor)->nama) ?></td>
          				<td>Target Hari Ini</td>
          				<td>: <?php echo $value->plan_target ?> %</td>
         			</tr>
@@ -70,6 +70,7 @@
             	  					<td>Keterangan
             	  						<ol>
             	  							<li><?php echo ucwords($this->mpekerjaan_final->get_edit($value->id_pekerjaan)->keterangan) ?></li>
+                                            <li><?php echo ucwords($this->mpekerjaan_final->get_edit($value->id_pekerjaan)->detail_keterangan) ?></li>
             	  						</ol>
             	  					</td>
             	  				</tr>
