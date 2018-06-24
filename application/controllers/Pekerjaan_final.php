@@ -48,6 +48,7 @@ class Pekerjaan_final extends Pertamina
 		$this->form_validation->set_rules('pengawas', 'Nama Pengawas', 'trim|required');
 		$this->form_validation->set_rules('tanggal', 'Tanggal', 'trim|required');
 		$this->form_validation->set_rules('id_kontraktor', 'Nama Kontraktor', 'trim|required');
+		$this->form_validation->set_rules('progress', 'progress', 'trim|required');
 		$this->form_validation->set_rules('plan_target', 'Plan Target', 'trim|required');
 		$this->form_validation->set_rules('jam_mulai', 'Jam Mulai', 'trim|required');
 		$this->form_validation->set_rules('jam_selesai', 'Jam Selesai', 'trim|required');
@@ -83,6 +84,7 @@ class Pekerjaan_final extends Pertamina
 		$this->form_validation->set_rules('pengawas', 'Nama Pengawas', 'trim|required');
 		$this->form_validation->set_rules('tanggal', 'Tanggal', 'trim|required');
 		$this->form_validation->set_rules('id_kontraktor', 'Nama Kontraktor', 'trim|required');
+		$this->form_validation->set_rules('progress', 'progress', 'trim|required');
 		$this->form_validation->set_rules('plan_target', 'Plan Target', 'trim|required');
 		$this->form_validation->set_rules('actual_target', 'Actual Target', 'trim|required');
 		$this->form_validation->set_rules('jam_mulai', 'Jam Mulai', 'trim|required');

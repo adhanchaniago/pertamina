@@ -42,9 +42,9 @@
 							<!-- <td class="text-center"><?php echo ucwords($this->mhistory->data_kontraktor($value->id_kontraktor)->nama) ?></td> -->
 							<td class="text-center"><?php echo $value->plan_target ?></td>
 							<td class="text-center"><?php echo $value->actual_target ?></td>
-							<td class="text-center"><?php echo $value->plan_target + $value->actual_target; ?></td>
-							<td class="text-center"><?php echo $value->jam_mulai ?></td>
-							<td class="text-center"><?php echo $value->jam_selesai ?></td>
+							<td class="text-center"><?php echo $value->actual_target /  $value->plan_target * 100 ?></td>
+							<td class="text-center"><?php echo substr($value->jam_mulai, 0,5) ?></td>
+							<td class="text-center"><?php echo substr($value->jam_selesai, 0,5) ?></td>
 							<!-- <td class="text-center"><?php echo $value->status ?></td> -->
 							
 						</tr>

@@ -21,14 +21,14 @@
          				<td>:</td>
          				<td width="400"><?php echo ucwords($this->mpekerjaan_final->get_edit($value->id_pekerjaan)->no_pekerjaan) ?></td>
          				<td width="250">Progress Sebelumnya</td>
-         				<td width="200"> : <?php echo $value->plan_target + $value->actual_target; ?> %</td>
+         				<td width="200"> : <?php echo $value->progress; ?> %</td>
         			</tr>
 
         			<tr align="left" valign="top">
          				<td>Pelaksana</td>
          				<td>:</td>
          				<td><?php echo ucwords($this->mpekerjaan_final->data_kontraktor($value->id_kontraktor)->nama) ?></td>
-         				<td>Target Hari Ini</td>
+         				<td>Plan Target</td>
          				<td>: <?php echo $value->plan_target ?> %</td>
         			</tr>
 
@@ -37,7 +37,7 @@
          				<td>:</td>
          				<td><?php echo ucwords($this->mpekerjaan_final->get_pengawas($value->pengawas)->nama_pegawai) ?></td>
          				<td>Mulai</td>
-         				<td>: <?php echo $value->jam_mulai ?> WIB</td>
+         				<td>: <?php echo substr($value->jam_mulai, 0,5) ?> WIB</td>
         			</tr>
 
           	 	 	<tr align="left" valign="top" valign="top">
@@ -51,7 +51,7 @@
                     <?php endforeach; ?>
              				</td>
              				<td>Selesai <br> Durasi</td>
-             				<td>: <?php echo $value->jam_selesai ?> WIB
+             				<td>: <?php echo substr($value->jam_selesai, 0,5) ?> WIB
                             <br>: <?php date_default_timezone_set('Asia/Jakarta');
                             $awal  = date_create($value->jam_mulai);
                             $akhir = date_create($value->jam_selesai); // waktu sekarang, pukul 06:13
@@ -63,15 +63,14 @@
             		  			<table border="1" width="100%">
             	  				<tr align="left" valign="top">
             	  					<td>Pekerjaan Hari Ini :
-            	  						<ol >
-            	  							<li><?php echo ucwords($this->mpekerjaan_final->data_kontraktor($value->id_kontraktor)->jenis) ?></li>
-            	  						</ol>
+            	  						
+            	  							<?php echo ucwords($this->mpekerjaan_final->get_edit($value->id_pekerjaan)->keterangan) ?>
+            	  					
             	  					</td>
             	  					<td>Keterangan
-            	  						<ol>
-            	  							<li><?php echo ucwords($this->mpekerjaan_final->get_edit($value->id_pekerjaan)->keterangan) ?></li>
-                                            <li><?php echo ucwords($this->mpekerjaan_final->get_edit($value->id_pekerjaan)->detail_keterangan) ?></li>
-            	  						</ol>
+            	  						
+            	  							<?php echo ucwords($this->mpekerjaan_final->get_edit($value->id_pekerjaan)->detail_keterangan) ?>
+            	  					
             	  					</td>
             	  				</tr>
             	  			</table>

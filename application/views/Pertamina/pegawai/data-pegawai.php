@@ -80,6 +80,7 @@ echo form_close();
 							<th class="text-center" style="width: 50px;">No</th>
 							<th class="text-center">Employee Name</th>
 							<th class="text-center">Category</th>
+							<th></th>
 						</tr>
 					</thead>
 					<tbody>

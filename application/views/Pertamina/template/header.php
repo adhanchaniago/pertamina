@@ -30,6 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <link rel="stylesheet" href="<?php echo base_url('assets/public/plugins/morris/morris.css'); ?>">
 
   <link rel="stylesheet" href="<?php echo base_url("assets/public/plugins/timepicker/bootstrap-timepicker.min.css"); ?>">
+  <link rel="stylesheet" href="<?php echo base_url("assets/public/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css"); ?>">
 
 <style type="text/css">.color{background-color: #A1A1A1;}</style>
 <link rel="stylesheet" href="<?php echo base_url("assets/public/plugins/datatables/dataTables.bootstrap.css"); ?>">
@@ -69,6 +70,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   <script src="<?php echo base_url('assets/public/plugins/morris/raphael-min.js'); ?>"></script>
   <script src="<?php echo base_url('assets/public/plugins/morris/morris.min.js'); ?>"></script>
+    <script src="<?php echo base_url('assets/public/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js'); ?>"></script>
+  
 
   <script type="text/javascript"> 
       var base_url   = '<?php echo site_url(); ?>';
@@ -76,14 +79,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       var current_url = '<?php echo current_url(); ?>';
   </script>
   <script>
+  $(function () {
+
+    //bootstrap WYSIHTML5 - text editor
+    $('.textarea').wysihtml5()
+  })
+</script>
+  <script>
     
   $(function () {
     $('.select2').select2()
+
+
 
     $('#datepicker1').datepicker({
       autoclose: true,
       format: 'yyyy-mm-dd',
     })
+
+
   })
   
   $(function () {

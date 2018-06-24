@@ -58,7 +58,7 @@
   </div>
   </footer>
     <!-- Bootstrap core JavaScript -->
-    <script src="<?php echo base_url("assets/pertamina/Slider/slider/vendor/jquery/jquery.min.js"); ?>"></script>
+    <script src="<?php echo base_url("assets/pertamina/Slider/slider/vendor/jquery/jquery.js"); ?>"></script>
     <script src="<?php echo base_url("assets/pertamina/Slider/slider/vendor/jquery/jquery-2.1.1.min.js"); ?>"></script>
     <script src="<?php echo base_url("assets/pertamina/Slider/slider/vendor/bootstrap/js/bootstrap.bundle.min.js"); ?>"></script> 
     <script src="<?php echo base_url("assets/pertamina/Slider/file/vue.min.js"); ?>"></script> 
@@ -66,6 +66,6 @@
     <script>
        setTimeout(function(){
            location.reload();
-       },60000); // 5000 milliseconds atau 5 seconds.
+       }, 40000); 
     </script>
   </body>

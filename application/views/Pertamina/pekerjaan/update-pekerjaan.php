@@ -28,16 +28,16 @@ echo form_open(current_url(), array('class' => 'form-horizontal'));
 					</div>
 				</div>
 				<div class="form-group">
-                    <label for="deskripsi" class="control-label col-md-3 col-xs-12">Information details : <strong class="text-red">*</strong></label>
+                    <label for="deskripsi" class="control-label col-md-3 col-xs-12">Information Details : <strong class="text-red">*</strong></label>
                    	<div class="col-md-8">
-                   		<textarea name="keterangan" rows="6" class="form-control"   placeholder="Information details"><?php echo $get->keterangan ?></textarea>
+                   		<textarea name="keterangan" rows="6" class="form-control textarea"   placeholder="Information details"><?php echo $get->keterangan ?></textarea>
                    		<p class="help-block"><?php echo form_error('keterangan', '<small class="text-red">', '</small>'); ?></p>      
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="deskripsi" class="control-label col-md-3 col-xs-12">job details : <strong class="text-red">*</strong></label>
+                    <label for="deskripsi" class="control-label col-md-3 col-xs-12">Job Details : <strong class="text-red">*</strong></label>
                    	<div class="col-md-8">
-                   		<textarea name="detail_keterangan" rows="6" class="form-control" placeholder="job details"><?php echo $get->detail_keterangan ?></textarea>
+                   		<textarea name="detail_keterangan" rows="6" class="form-control textarea" placeholder="job details"><?php echo $get->detail_keterangan ?></textarea>
                    		<p class="help-block"><?php echo form_error('detail_keterangan', '<small class="text-red">', '</small>'); ?></p>      
                     </div>
                 </div>

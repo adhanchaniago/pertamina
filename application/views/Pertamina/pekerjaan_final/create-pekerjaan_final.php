@@ -72,6 +72,16 @@ echo form_open(current_url(), array('class' => 'form-horizontal'));
 					</div>
 				</div>
 				<div class="form-group">
+					<label for="level" class="control-label col-md-3 col-xs-12">Progress Sebelumnya : <strong class="text-red">*</strong></label>
+					<div class="col-md-6">
+					<div class="input-group">
+				    	<input type="text" class="form-control" name="progress" value="<?php echo set_value('progress'); ?>">
+				    	<span class="input-group-addon"><i class="fa fa-percent"></i></span>
+				  	</div>
+					<p class="help-block"><?php echo form_error('progress', '<small class="text-red">', '</small>'); ?></p>
+					</div>
+				</div>
+				<div class="form-group">
 					<label for="level" class="control-label col-md-3 col-xs-12">Plan Target : <strong class="text-red">*</strong></label>
 					<div class="col-md-6">
 					<div class="input-group">

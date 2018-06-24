@@ -27,7 +27,7 @@ echo form_open(current_url(), array('class' => 'form-horizontal'));
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="no_telp" class="control-label col-md-3 col-xs-12">NO Handphone : <strong class="text-red">*</strong></label>
+					<label for="no_telp" class="control-label col-md-3 col-xs-12">No Handphone : <strong class="text-red">*</strong></label>
 					<div class="col-md-8">
 						<input type="text" name="no_telp" class="form-control" value="<?php echo $get->no_telp  ?>">
 						<p class="help-block"><?php echo form_error('no_telp', '<small class="text-red">', '</small>'); ?></p>

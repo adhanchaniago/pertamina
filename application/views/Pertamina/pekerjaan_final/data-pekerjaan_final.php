@@ -45,7 +45,7 @@
 							<th class="text-center">Start</th>
 							<th class="text-center">Finish</th>
 							<!-- <th class="text-center">Status</th> -->
-							<th class="text-center">Keterangan</th>
+							<th class="text-center">Information</th>
 							<th class="text-center"></th>
 							<th></th>
 						</tr>
