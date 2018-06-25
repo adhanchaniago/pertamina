@@ -20,10 +20,10 @@ class Konteraktor extends Pertamina
 	public function index() 
 	{
 
-		$this->page_title->push('Constitution', 'Constitution Data');
+		$this->page_title->push('Contractor', 'Contractor Data');
 
 		$this->data = array(
-			'title' => "Konteraktor - Sistem Monitoring", 
+			'title' => "Contractor - Sistem Monitoring", 
 			'breadcrumbs' => $this->breadcrumbs->show(),
 			'page_title' => $this->page_title->show(),
 			'kontraktor' => $this->mkontraktor->get_tampil()
@@ -35,7 +35,7 @@ class Konteraktor extends Pertamina
 
 	public function create()
 	{
-		$this->page_title->push('Constitution', 'Constitution Data');
+		$this->page_title->push('Contractor', 'Contractor Data');
 
 		$this->form_validation->set_rules('nama', 'Constitution name ', 'trim|required');
 		$this->form_validation->set_rules('jenis', 'Type of Constitution', 'trim|required');
@@ -52,7 +52,7 @@ class Konteraktor extends Pertamina
 		}
 
 		$this->data = array(
-			'title' => "Constitution - Monitoring System", 
+			'title' => "Contractor - Monitoring System", 
 			'breadcrumbs' => $this->breadcrumbs->show(),
 			'page_title' => $this->page_title->show(),
 			'pegawai' => $this->mkontraktor->get_pegawai(),
@@ -65,7 +65,7 @@ class Konteraktor extends Pertamina
 
 	public function update($param = 0)
 	{
-		$this->page_title->push('Konteraktor', 'Update Data Konteraktor');
+		$this->page_title->push('Contractor', 'Update Data Contractor');
 
 		$this->form_validation->set_rules('nama', 'Nama Konteraktor ', 'trim|required');
 		$this->form_validation->set_rules('jenis', 'Jenis Konteraktor', 'trim|required');
@@ -82,7 +82,7 @@ class Konteraktor extends Pertamina
 		}
 
 		$this->data = array(
-			'title' => "Konteraktor - Sistem Monitoring", 
+			'title' => "Contractor - Sistem Monitoring", 
 			'breadcrumbs' => $this->breadcrumbs->show(),
 			'page_title' => $this->page_title->show(),
 			'get' => $this->mkontraktor->get($param),

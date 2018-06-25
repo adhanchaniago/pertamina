@@ -66,7 +66,7 @@ class Login extends CI_Controller
     }
 
     $this->data = array(
-      'title' => "Login Sistem Penerimaan Karyawan", 
+      'title' => "Login Sistem Monitoring Pekerjaan", 
     );
 
     $this->load->view('Pertamina/login', $this->data);

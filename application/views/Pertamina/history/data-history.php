@@ -21,7 +21,7 @@
 							<th class="text-center">Pencapaian</th>
 							<th class="text-center">Jam Mulai</th>
 							<th class="text-center">Jam Selesai</th>
-							<!-- <th class="text-center">Status</th> -->
+							<th class="text-center"></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -42,10 +42,15 @@
 							<!-- <td class="text-center"><?php echo ucwords($this->mhistory->data_kontraktor($value->id_kontraktor)->nama) ?></td> -->
 							<td class="text-center"><?php echo $value->plan_target ?></td>
 							<td class="text-center"><?php echo $value->actual_target ?></td>
-							<td class="text-center"><?php echo $value->actual_target /  $value->plan_target * 100 ?></td>
+							<td class="text-center"><?php echo ceil($value->actual_target /  $value->plan_target * 100) ?></td>
 							<td class="text-center"><?php echo substr($value->jam_mulai, 0,5) ?></td>
 							<td class="text-center"><?php echo substr($value->jam_selesai, 0,5) ?></td>
-							<!-- <td class="text-center"><?php echo $value->status ?></td> -->
+							<td class="text-center">
+							<a href="<?php echo site_url("pekerjaan_final/update/{$value->id}") ?>" class="btn btn-xs btn-success" data-toggle="tooltip" data-placement="top" title="Sunting"><i class="fa fa-pencil"></i></a>
+							<a href="javascript:void(0)" id="delete-pekerjaan_final" data-id="<?php echo $value->id ?>" class="btn btn-xs btn-danger" data-toggle="tooltip" data-placement="top" title="Hapus">
+                      		<i class="fa fa-trash-o"></i>
+                      		</a>
+							</td>
 							
 						</tr>
 						<?php endforeach ?>

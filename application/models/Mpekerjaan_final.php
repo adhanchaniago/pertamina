@@ -184,6 +184,11 @@ class Mpekerjaan_final extends Pertamina_Model
 			);
 		}
 	}
+
+	public function home($param = '')
+	{
+		return $this->db->get_where('pegawai', array('katagori' => $param) )->num_rows();
+	}
 }
 
 /* End of file Mpekerjaa_final.php */

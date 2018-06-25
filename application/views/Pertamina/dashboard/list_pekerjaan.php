@@ -34,7 +34,7 @@
 
         			<tr align="left" valign="top">
          				<td>Pengawas</td>
-         				<td>:</td>
+         				<td>:&emsp; </td>
          				<td><?php echo ucwords($this->mpekerjaan_final->get_pengawas($value->pengawas)->nama_pegawai) ?></td>
          				<td>Mulai</td>
          				<td>: <?php echo substr($value->jam_mulai, 0,5) ?> WIB</td>
@@ -42,13 +42,13 @@
 
           	 	 	<tr align="left" valign="top" valign="top">
              				<td>Pekerja</td>
-             				<td>:</td>
+             				<td>: &emsp;</td>
              				<td>
      				       <?php 
-                     $array =  explode(",", $value->id_pegawai); 
-                    foreach ($array as $key => $values) : ?>
-                    <li><?php echo ucwords($this->mpekerjaan_final->get_pengawas($values)->nama_pegawai) ?></li>
-                    <?php endforeach; ?>
+                            $array =  explode(",", $value->id_pegawai); 
+                            foreach ($array as $key => $values) : ?>
+                            <li><?php echo ucwords($this->mpekerjaan_final->get_pengawas($values)->nama_pegawai) ?></li>
+                            <?php endforeach; ?>
              				</td>
              				<td>Selesai <br> Durasi</td>
              				<td>: <?php echo substr($value->jam_selesai, 0,5) ?> WIB
@@ -62,12 +62,12 @@
             		  		<td colspan="5">
             		  			<table border="1" width="100%">
             	  				<tr align="left" valign="top">
-            	  					<td>Pekerjaan Hari Ini :
+            	  					<td>&emsp; Pekerjaan Hari Ini :
             	  						
             	  							<?php echo ucwords($this->mpekerjaan_final->get_edit($value->id_pekerjaan)->keterangan) ?>
             	  					
             	  					</td>
-            	  					<td>Keterangan
+            	  					<td>&emsp; Keterangan :
             	  						
             	  							<?php echo ucwords($this->mpekerjaan_final->get_edit($value->id_pekerjaan)->detail_keterangan) ?>
             	  					

@@ -27,14 +27,14 @@ echo form_open(current_url(), array('class' => 'form-horizontal'));
 					</div>
 				</div>
 				<div class="form-group">
-                    <label for="deskripsi" class="control-label col-md-3 col-xs-12">Information Details : <strong class="text-red">*</strong></label>
+                    <label for="deskripsi" class="control-label col-md-3 col-xs-12">Activitas : <strong class="text-red">*</strong></label>
                    	<div class="col-md-8">
                    		<textarea name="keterangan" rows="" class="form-control textarea" value="<?php echo set_value('keterangan'); ?>" placeholder="Information details"></textarea>
                    		<p class="help-block"><?php echo form_error('keterangan', '<small class="text-red">', '</small>'); ?></p>      
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="deskripsi" class="control-label col-md-3 col-xs-12">Job Dwetails : <strong class="text-red">*</strong></label>
+                    <label for="deskripsi" class="control-label col-md-3 col-xs-12">Informasi : <strong class="text-red">*</strong></label>
                    	<div class="col-md-8">
                    		<textarea class="textarea" name="detail_keterangan"  value="<?php echo set_value('detail_keterangan'); ?>" placeholder="job details" style="width: 100%; "></textarea>
                    		<p class="help-block"><?php echo form_error('detail_keterangan', '<small class="text-red">', '</small>'); ?></p>      

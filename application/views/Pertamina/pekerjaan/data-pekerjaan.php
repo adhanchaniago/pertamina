@@ -80,8 +80,8 @@ echo form_close();
 							<th class="text-center"  style="width: 50px;">No</th>
 							<th class="text-center">Employment Number</th>
 							<th class="text-center">Employment Name</th>
-							<th class="text-center">Details Information</th>
-							<th class="text-center">Job Details</th>
+							<th class="text-center">Activitas</th>
+							<th class="text-center">Informasi</th>
 							<th></th>
 						</tr>
 					</thead>
@@ -91,8 +91,8 @@ echo form_close();
 							<td class="text-center"><?php echo ++$this->page ?>.</td>
 							<td class="text-center"><?php echo $row->no_pekerjaan; ?></td>
 							<td class="text-center"><?php echo $row->nama_pekerjaan; ?></td>
-							<td class="text-center"><?php echo $row->keterangan ?></td>
-							<td class="text-center"><?php echo $row->detail_keterangan ?></td>
+							<td class="text-left"><?php echo $row->keterangan ?></td>
+							<td class="text-left"><?php echo $row->detail_keterangan ?></td>
 							<td class="text-center" style="width: 90px;">
 							
 							<a href="<?php echo site_url("pekerjaan/update/{$row->id}") ?>" class="icon-button text-blue" data-toggle="tooltip" data-placement="top" title="Sunting"><i class="fa fa-pencil"></i></a>

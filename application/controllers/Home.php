@@ -8,13 +8,14 @@ class Home extends Pertamina {
 		parent::__construct();
 
 		$this->load->model('mjson_location');
+		$this->load->model('mpekerjaan_final');
 
 	}
 
 	public function index() 
 	{
 
-		$this->page_title->push('Home', 'Selamat datang di Sistem Monitoring Pertamina');
+		$this->page_title->push('Home', 'Selamat datang di Sistem Monitoring Pekerjaan');
 
 		$this->data = array(
 			'title' => "Home - Sistem Monitoring", 
