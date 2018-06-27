@@ -70,7 +70,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   <script src="<?php echo base_url('assets/public/plugins/morris/raphael-min.js'); ?>"></script>
   <script src="<?php echo base_url('assets/public/plugins/morris/morris.min.js'); ?>"></script>
-    <script src="<?php echo base_url('assets/public/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/public/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js'); ?>"></script>
   
 
   <script type="text/javascript"> 
