@@ -53,6 +53,7 @@
 
 					<tbody>
 						<?php foreach ($this->mpekerjaan_final->data() as $key => $value): ?>
+							<?php if ($value->status == 'opened'): ?>
 						<tr>
 							
 							<td class="text-center"><?php echo ++$key ?></td>
@@ -90,6 +91,7 @@
                       		</a>
 							</td>
 						</tr>
+							<?php endif; ?>
 						<?php endforeach ?>
 					</tbody>
 				</table>
