@@ -107,6 +107,7 @@ class Mpekerjaan_final extends Pertamina_Model
 			'actual_target' => Null,
 			'jam_mulai' => $this->input->post('jam_mulai'),
 			'jam_selesai' => $this->input->post('jam_selesai'),
+			'jenis_anggaran' => $this->input->post('jenis_anggaran'),
 			'status' => $this->input->post('status'),
 			'sekarang' => date("Y-m-d H:i:s"),
 
@@ -146,6 +147,7 @@ class Mpekerjaan_final extends Pertamina_Model
 			'actual_target' => $this->input->post('actual_target'),
 			'jam_mulai' => $this->input->post('jam_mulai'),
 			'jam_selesai' => $this->input->post('jam_selesai'),
+			'jenis_anggaran' => $this->input->post('jenis_anggaran'),
 			'status' => $this->input->post('status'),
 		);
 

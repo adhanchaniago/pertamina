@@ -14,7 +14,7 @@ class Dashboard extends CI_controller
 	public function index() 
 	{
 		$this->data = array(
-			'title' => "Pertamin", 
+			'title' => "Pertamina", 
 			'get_data' => $this->mpekerjaan_final->data_edit(),
 		);
 

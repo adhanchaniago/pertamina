@@ -39,7 +39,7 @@ class Konteraktor extends Pertamina
 
 		$this->form_validation->set_rules('nama', 'Constitution name ', 'trim|required');
 		$this->form_validation->set_rules('jenis', 'Type of Constitution', 'trim|required');
-		$this->form_validation->set_rules('id_pegawai', 'Employee Name ', 'trim|required');
+	
 		$this->form_validation->set_rules('direktur', 'Director ', 'trim|required');
 		$this->form_validation->set_rules('sekretaris', 'Secretary', 'trim|required');
 		$this->form_validation->set_rules('HSSE', 'HSSE', 'trim|required');
@@ -69,7 +69,6 @@ class Konteraktor extends Pertamina
 
 		$this->form_validation->set_rules('nama', 'Nama Konteraktor ', 'trim|required');
 		$this->form_validation->set_rules('jenis', 'Jenis Konteraktor', 'trim|required');
-		$this->form_validation->set_rules('id_pegawai', 'Employee Name ', 'trim|required');
 		$this->form_validation->set_rules('direktur', 'Direktur ', 'trim|required');
 		$this->form_validation->set_rules('sekretaris', 'Sekretaris', 'trim|required');
 		$this->form_validation->set_rules('HSSE', 'HSSE', 'trim|required');

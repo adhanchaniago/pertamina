@@ -52,11 +52,13 @@
 					</thead>
 
 					<tbody>
-						<?php foreach ($this->mpekerjaan_final->data() as $key => $value): ?>
+						<?php 
+						
+						foreach ($this->mpekerjaan_final->data() as $key => $value): ?>
 							<?php if ($value->status == 'opened'): ?>
 						<tr>
 							
-							<td class="text-center"><?php echo ++$key ?></td>
+							<td class="text-center"><?php echo ++$this->page ?></td>
 							<td class="text-center"><?php echo ucwords($this->mpekerjaan_final->get_edit($value->id_pekerjaan)->nama_pekerjaan) ?></td>
 
 							<!-- <td class="text-center"><?php echo date_id($value->tanggal) ?></td> -->
