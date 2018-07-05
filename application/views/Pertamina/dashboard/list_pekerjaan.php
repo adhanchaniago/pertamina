@@ -60,24 +60,17 @@
                             echo $diff->h; // Hasil: 5 ?> Jam
                             <br>: <?php echo $value->jenis_anggaran; ?> 
                         </td>
-
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> dfabadbe0b8d30b6518064c045a9d2793360ca9f
           	  		</tr>
             	 	 	<tr valign="top">
             		  		<td colspan="5">
             		  			<table border="1" width="100%">
             	  				<tr align="left" valign="top">
-            	  					<td style="50%">&emsp; Pekerjaan Hari Ini : <br>
+            	  					<td width="50%">&emsp; Pekerjaan Hari Ini : <br>
             	  						
             	  							<?php echo ucwords($this->mpekerjaan_final->get_edit($value->id_pekerjaan)->keterangan) ?>
             	  					
             	  					</td>
-            	  					<td style="50%">&emsp; Keterangan : <br>
+            	  					<td width="50%">&emsp; Keterangan : <br>
             	  						
             	  							<?php echo ucwords($this->mpekerjaan_final->get_edit($value->id_pekerjaan)->detail_keterangan) ?>
             	  					

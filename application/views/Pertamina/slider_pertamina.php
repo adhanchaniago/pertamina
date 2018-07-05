@@ -37,9 +37,7 @@
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="20000">
       <div class="carousel-inner" role="listbox">
         <!-- ini adalah isi yang di loop -->
-        
           <?php include('dashboard/list_pekerjaan.php') ?>
-          
         <!-- ini adalah isi yang di loop -->
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -68,8 +66,8 @@
            location.reload();
        }, 40000); 
 
-         $('.carousel').carousel({
-          interval: 2000 * 10
-          });
+       $('.carousel').carousel({
+        interval: 2000 * 10
+        });
     </script>
   </body>
