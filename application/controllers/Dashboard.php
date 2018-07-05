@@ -11,10 +11,10 @@ class Dashboard extends CI_controller
 		$this->load->model('mpekerjaan_final');
 
 	}
-	public function index() 
+	public function index($param = 0) 
 	{
 		$this->data = array(
-			'title' => "Pertamin", 
+			'title' => "Pertamina", 
 			'get_data' => $this->mpekerjaan_final->data_edit(),
 		);
 

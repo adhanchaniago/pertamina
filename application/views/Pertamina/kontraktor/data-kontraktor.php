@@ -81,7 +81,7 @@ echo form_close();
 							<th class="text-center" style="width: 50px;">No</th>
 							<th class="text-center">Contractor name</th>
 							<th class="text-center">Type of Contractor</th>
-							<th class="text-center">Employee Name</th>
+						<!-- 	<th class="text-center">Employee Name</th> -->
 							<th class="text-center">Director</th>
 							<th class="text-center">Secretary</th>
 							<th class="text-center">HSSE</th>
@@ -94,7 +94,7 @@ echo form_close();
 							<td class="text-center"><?php echo ++$key ?></td>
 							<td class="text-center"><?php echo $value->nama ?></td>
 							<td class="text-center"><?php echo $value->jenis ?></td>
-							<td class="text-center"><?php echo $value->nama_pegawai ?></td>
+							<!-- <td class="text-center"><?php echo $value->nama_pegawai ?></td> -->
 							<td class="text-center"><?php echo $value->direktur ?></td>
 							<td class="text-center"><?php echo $value->sekretaris ?></td>
 							<td class="text-center"><?php echo $value->HSSE ?></td>

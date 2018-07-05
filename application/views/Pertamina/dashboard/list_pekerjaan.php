@@ -1,12 +1,13 @@
 
 <?php foreach ($this->mpekerjaan_final->data() as $key => $value): ?>
+
 <div class="carousel-item <?php if (++$key == 1): ?>
   active
 <?php endif ?> " style="background-image: url('#')">
 
   <div class="carousel-caption d-md-block slider_item">
   	<div class="tittle" >
-  		  <div class="title-p">PEKERJAAN HARI INI</div>
+  		  <div class="title-p">PEKERJAAN HARI INI <?php echo $value->status; ?></div>
   		  <div class="date-picker"><?php echo date_id($value->tanggal) ?><!-- <?php include('date_picker.php') ?> --></div>
   	</div>
       	<div class="to-do">
@@ -40,7 +41,7 @@
          				<td>: <?php echo substr($value->jam_mulai, 0,5) ?> WIB</td>
         			</tr>
 
-          	 	 	<tr align="left" valign="top" valign="top">
+          	 	 	<tr align="left" valign="top" valign="top" >
              				<td>Pekerja</td>
              				<td>: &emsp;</td>
              				<td>
@@ -50,24 +51,27 @@
                             <li><?php echo ucwords($this->mpekerjaan_final->get_pengawas($values)->nama_pegawai) ?></li>
                             <?php endforeach; ?>
              				</td>
-             				<td>Selesai <br> Durasi</td>
+             				<td >Selesai <br> Durasi <br>Jenis Anggaran</td>
              				<td>: <?php echo substr($value->jam_selesai, 0,5) ?> WIB
                             <br>: <?php date_default_timezone_set('Asia/Jakarta');
                             $awal  = date_create($value->jam_mulai);
                             $akhir = date_create($value->jam_selesai); // waktu sekarang, pukul 06:13
                             $diff  = date_diff( $akhir, $awal );
-                            echo $diff->h; // Hasil: 5 ?> Jam</td>
+                            echo $diff->h; // Hasil: 5 ?> Jam
+                            <br>: <?php echo $value->jenis_anggaran; ?> 
+                        </td>
+
           	  		</tr>
             	 	 	<tr valign="top">
             		  		<td colspan="5">
             		  			<table border="1" width="100%">
             	  				<tr align="left" valign="top">
-            	  					<td>&emsp; Pekerjaan Hari Ini :
+            	  					<td style="50%">&emsp; Pekerjaan Hari Ini : <br>
             	  						
             	  							<?php echo ucwords($this->mpekerjaan_final->get_edit($value->id_pekerjaan)->keterangan) ?>
             	  					
             	  					</td>
-            	  					<td>&emsp; Keterangan :
+            	  					<td style="50%">&emsp; Keterangan : <br>
             	  						
             	  							<?php echo ucwords($this->mpekerjaan_final->get_edit($value->id_pekerjaan)->detail_keterangan) ?>
             	  					
@@ -82,4 +86,5 @@
     </div>
  
 </div>
+
 <?php endforeach ?>

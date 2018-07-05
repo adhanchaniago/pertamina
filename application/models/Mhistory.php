@@ -59,6 +59,24 @@ class Mhistory extends Pertamina_Model
 		return $this->db->get_where('pekerjaan' , array('id' => $param))->row();
 	}
 
+	public function delete($param = 0)
+	{
+		$this->db->delete('pekerjaan_final', array('id' => $param));
+
+		if($this->db->affected_rows())
+		{
+			$this->template->alert(
+				'Pekerjaan dihapus.', 
+				array('type' => 'success','icon' => 'check')
+			);
+		} else {
+			$this->template->alert(
+				' Tidak ada data yang dihapus.', 
+				array('type' => 'warning','icon' => 'warning')
+			);
+		}
+	}
+
 }
 
 /* End of file Mhistory.php */

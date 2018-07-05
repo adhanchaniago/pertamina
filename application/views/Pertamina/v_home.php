@@ -30,7 +30,7 @@
             <span class="info-box-icon"><i class="glyphicon glyphicon-road"></i></span>
             <div class="info-box-content">
                 <span class="info-box-text">Kontraktor </span>
-                <span class="info-box-number"><?php echo $this->db->count_all('kontraktor'); ?> <small>kontraktor</small></span>
+                <span class="info-box-number"><?php echo $this->db->count_all('kontraktor'); ?> <small>Kontraktor</small></span>
                 <div class="progress">
                     <div class="progress-bar" style="width: 100%"></div>
                 </div>

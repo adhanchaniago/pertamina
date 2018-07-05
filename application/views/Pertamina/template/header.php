@@ -89,15 +89,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     
   $(function () {
     $('.select2').select2()
-
-
-
     $('#datepicker1').datepicker({
       autoclose: true,
       format: 'yyyy-mm-dd',
     })
-
-
   })
   
   $(function () {

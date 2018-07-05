@@ -138,7 +138,17 @@ echo form_open(current_url(), array('class' => 'form-horizontal'));
 					<p class="help-block"><?php echo form_error('jam_selesai', '<small class="text-red">', '</small>'); ?></p>
 					</div>
 				</div>
-
+				<div class="form-group">
+					<label for="agama" class="control-label col-md-3 col-xs-12">Budget Type : <strong class="text-red">*</strong></label>
+					<div class="col-md-4">
+						<select name="jenis_anggaran" class="form-control select2">
+							<option value="">-- PILIH --</option>
+							<option value="ABO" <?php if($data_edit->jenis_anggaran=='ABO') echo "selected"; ?>>Anggaran Biaya Operasional</option>
+							<option value="ABI" <?php if($data_edit->jenis_anggaran=='ABI') echo "selected"; ?>>Anggaran Biaya Investasi</option>
+						</select>
+						<p class="help-block"><?php echo form_error('status', '<small class="text-red">', '</small>'); ?></p>
+					</div>
+				</div> 
 				<div class="form-group">
 					<label for="agama" class="control-label col-md-3 col-xs-12">Status : <strong class="text-red">*</strong></label>
 					<div class="col-md-4">

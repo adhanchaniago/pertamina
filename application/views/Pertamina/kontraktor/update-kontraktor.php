@@ -26,18 +26,7 @@ echo form_open(current_url(), array('class' => 'form-horizontal'));
 						<p class="help-block"><?php echo form_error('jenis', '<small class="text-red">', '</small>'); ?></p>
 					</div>
 				</div>
-				<div class="form-group">
-					<label for="level" class="control-label col-md-3 col-xs-12">Employee Name  : <strong class="text-red">*</strong></label>
-					<div class="col-md-8">
-						<select name="id_pegawai" class="form-control select2">
-							<option value="">-- PILIH --</option>
-							<?php foreach ($pegawai as $key => $value) :?>
-							<option value="<?php echo $value->id_pegawai; ?>"><?php echo $value->nama_pegawai ?></option>
-							<?php endforeach; ?>
-						</select>
-						<p class="help-block"><?php echo form_error('id_pegawai', '<small class="text-red">', '</small>'); ?></p>
-					</div>
-				</div>
+				
 				<div class="form-group">
 					<label for="level" class="control-label col-md-3 col-xs-12">Director: <strong class="text-red">*</strong></label>
 					<div class="col-md-8">

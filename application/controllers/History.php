@@ -13,7 +13,7 @@ class History extends Pertamina
 		$this->page = $this->input->get('page');
 
 		$this->load->model('mjson_location');
-		$this->load->js(base_url('assets/public/app/pekerjaan_final.js'));
+		$this->load->js(base_url('assets/public/app/history.js'));
 		$this->load->model('mhistory');
 		$this->load->model('mpekerjaan_final');
 	}
@@ -29,6 +29,13 @@ class History extends Pertamina
 		);
 
 		$this->template->view('Pertamina/history/data-history', $this->data);
+	}
+
+	public function delete($param = 0)
+	{
+		$this->mhistory->delete($param);
+
+		redirect('history');
 	}
 
 }
