@@ -34,7 +34,7 @@
         </div>
       </div>
     </nav>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="20000">
       <div class="carousel-inner" role="listbox">
         <!-- ini adalah isi yang di loop -->
         
@@ -67,5 +67,9 @@
        setTimeout(function(){
            location.reload();
        }, 40000); 
+
+         $('.carousel').carousel({
+          interval: 2000 * 10
+          });
     </script>
   </body>

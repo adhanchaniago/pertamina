@@ -5,7 +5,7 @@
   active
 <?php endif ?> " style="background-image: url('#')">
 
-  <div class="carousel-caption d-md-block slider_item">
+  <div class="carousel-caption d-md-block slider_item carousel" data-interval="20000">
   	<div class="tittle" >
   		  <div class="title-p">PEKERJAAN HARI INI <?php echo $value->status; ?></div>
   		  <div class="date-picker"><?php echo date_id($value->tanggal) ?><!-- <?php include('date_picker.php') ?> --></div>
@@ -61,6 +61,12 @@
                             <br>: <?php echo $value->jenis_anggaran; ?> 
                         </td>
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> dfabadbe0b8d30b6518064c045a9d2793360ca9f
           	  		</tr>
             	 	 	<tr valign="top">
             		  		<td colspan="5">
