@@ -73,6 +73,7 @@ class Mpekerjaan_final extends Pertamina_Model
 
 	public function data()
 	{
+		
 		return $this->db->get_where('pekerjaan_final', array('status'=>'opened'))->result();
 
 	}
